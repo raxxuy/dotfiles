@@ -1,7 +1,7 @@
 {
   configName = "nixos-config";
 
-  terminal = "ghostty";
+  terminal = "ghostty --gtk-single-instance=true";
   explorer = "nautilus";
   launcher = "rofi -show drun";
   animations = false;

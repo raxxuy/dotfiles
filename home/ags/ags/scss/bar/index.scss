@@ -1,0 +1,19 @@
+@use "mixins" as *;
+@use "colors" as *;
+@use "workspaces";
+
+window#bar {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 0 20px;
+
+  tooltip {
+    background: black;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 2px;
+  }
+
+  @extend %workspaces;
+}
