@@ -1,4 +1,6 @@
 {
+  configName = "nixos-config";
+
   terminal = "ghostty";
   explorer = "nautilus";
   launcher = "rofi -show drun";
