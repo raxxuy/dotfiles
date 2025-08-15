@@ -28,5 +28,6 @@
     hyprshot
     hyprpicker
     rofi-wayland
+    brightnessctl
   ];
 }

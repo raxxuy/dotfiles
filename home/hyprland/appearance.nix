@@ -1,5 +1,5 @@
 let
-  inherit (import ../../hosts/micho/variables.nix) blur;
+  inherit (import ../../hosts/micho/variables.nix) animations blur;
 in
 {
   wayland.windowManager.hyprland.settings = {
@@ -21,6 +21,10 @@ in
       };
 
       shadow.enabled = false;
+    };
+
+    animations = {
+      enabled = animations;
     };
 
     misc = {

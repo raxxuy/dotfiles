@@ -4,6 +4,7 @@
   terminal = "ghostty";
   explorer = "nautilus";
   launcher = "rofi -show drun";
+  animations = false;
 
   # Git
   git = {
