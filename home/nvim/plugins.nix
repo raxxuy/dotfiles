@@ -37,15 +37,16 @@
           "<C-p>" = "cmp.mapping.select_prev_item()";
           "<CR>" = "cmp.mapping.confirm({ select = true })";
           "<Tab>" = ''
-            function(fallback)
-              if cmp.visible() then
-                cmp.select_next_item()
-              elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
-              else
-                fallback()
-              end
-            end
+                        function(fallback)
+            						  local luasnip = require("luasnip")
+                          if cmp.visible() then
+                            cmp.select_next_item()
+                          elseif luasnip.expand_or_jumpable() then
+                            luasnip.expand_or_jump()
+                          else
+                            fallback()
+                          end
+                        end
           '';
           "<S-Tab>" = ''
             function(fallback)
