@@ -1,8 +1,5 @@
 let
-  inherit
-    (import ../../hosts/micho/variables.nix)
-    blur
-    ;
+  inherit (import ../../hosts/micho/variables.nix) blur;
 in
 {
   wayland.windowManager.hyprland.settings = {

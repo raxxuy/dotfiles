@@ -15,7 +15,7 @@
     xwayland.enable = true;
 
     settings = {
-      "$mod" = "SUPER";
+      "$mod" = "Super";
       monitor = [ ",1920x1080@180,auto,1" ];
     };
   };

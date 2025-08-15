@@ -1,8 +1,5 @@
 let
-  inherit
-    (import ../hosts/micho/variables.nix)
-    git
-    ;
+  inherit (import ../hosts/micho/variables.nix) git;
 in
 {
   programs.git = {

@@ -1,6 +1,7 @@
 {
   programs.nixvim.plugins = {
     lualine.enable = true;
+    luasnip.enable = true; # Snippet engine for nvim-cmp
     neo-tree.enable = true;
     web-devicons.enable = true;
 
@@ -26,8 +27,6 @@
       ];
     };
 
-    luasnip.enable = true; # Snippet engine for nvim-cmp
-
     conform-nvim = {
       enable = true;
       settings = {
@@ -37,6 +36,19 @@
 
         formatters_by_ft = {
           nix = [ "nixpkgs_fmt" ]; # or "alejandra"
+        };
+      };
+    };
+
+    gitsigns = {
+      enable = true;
+      settings = {
+        signs = {
+          add = { text = "+"; };
+          change = { text = "~"; };
+          delete = { text = "_"; };
+          topdelete = { text = "‾"; };
+          changedelete = { text = "~"; };
         };
       };
     };

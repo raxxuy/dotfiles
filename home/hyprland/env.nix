@@ -1,8 +1,5 @@
 let
-  inherit
-    (import ../../hosts/micho/variables.nix)
-    cursor
-    ;
+  inherit (import ../../hosts/micho/variables.nix) cursor;
 in
 {
   wayland.windowManager.hyprland.settings = {
