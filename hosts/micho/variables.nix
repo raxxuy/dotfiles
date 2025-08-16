@@ -4,7 +4,7 @@
   terminal = "ghostty --gtk-single-instance=true";
   explorer = "nautilus";
   launcher = "rofi -show drun";
-  animations = false;
+  animations = true;
 
   # Git
   git = {
