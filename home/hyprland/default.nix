@@ -28,7 +28,6 @@
     hyprshot
     hyprpicker
     imagemagick
-    rofi-wayland
     brightnessctl
   ];
 }

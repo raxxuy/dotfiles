@@ -1,6 +1,6 @@
 import { createState, For } from "ags";
-import { Button } from "../../components/button";
 import AstalHyprland from "gi://AstalHyprland";
+import { Button } from "../../components/button";
 import { Workspace } from "../../types";
 
 const wpCount = 9;

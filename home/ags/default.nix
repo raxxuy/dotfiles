@@ -8,7 +8,7 @@ in
   programs.ags = {
     enable = true;
 
-    configDir = config.lib.file.mkOutOfStoreSymlink "/home/micho/${configName}/home/ags/ags";
+    configDir = config.lib.file.mkOutOfStoreSymlink "/home/micho/${configName}/home/ags/config";
 
     extraPackages = [
       inputs.astal.packages.${pkgs.system}.apps

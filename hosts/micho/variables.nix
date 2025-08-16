@@ -3,7 +3,7 @@
 
   terminal = "ghostty --gtk-single-instance=true";
   explorer = "nautilus";
-  launcher = "rofi -show drun";
+  launcher = "ags toggle launcher";
   animations = true;
 
   # Git

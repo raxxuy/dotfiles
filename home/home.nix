@@ -10,6 +10,10 @@
     discord
     firefox
     pavucontrol
+
+    # fonts
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
   ];
 
   # Enable XDG user directories
@@ -28,6 +32,7 @@
 
   imports = [
     ./ghostty.nix
+    ./vscode.nix
     ./theme.nix
     ./fish.nix
     ./git.nix
