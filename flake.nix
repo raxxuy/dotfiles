@@ -1,6 +1,9 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    astal.url = "github:aylur/astal";
+    ags.url = "github:aylur/ags";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -11,10 +14,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    astal.url = "github:aylur/astal";
-
-    ags.url = "github:aylur/ags";
   };
 
   outputs = inputs @ { nixpkgs, home-manager, ... }:

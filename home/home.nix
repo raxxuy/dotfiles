@@ -32,6 +32,7 @@
 
   imports = [
     ./ghostty.nix
+    ./spotify.nix
     ./vscode.nix
     ./theme.nix
     ./fish.nix
