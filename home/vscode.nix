@@ -11,6 +11,9 @@
           esbenp.prettier-vscode
           github.copilot
           github.copilot-chat
+          bradlc.vscode-tailwindcss
+          ms-python.python
+          ms-python.vscode-pylance
         ]) ++
         (pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
@@ -31,6 +34,10 @@
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
         "workbench.iconTheme" = "icons";
         "workbench.colorTheme" = "Cursor Dark Core";
+        "github.copilot.nextEditSuggestions.enabled" = true;
+        "[python]" = {
+          "editor.tabSize" = 4;
+        };
       };
     };
   };

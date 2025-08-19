@@ -39,7 +39,7 @@
     shell = pkgs.fish;
     isNormalUser = true;
     description = "micho";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
   # Enable unfree packages
@@ -53,6 +53,9 @@
 
   # Enable Hyprland
   programs.hyprland.enable = true;
+
+  # Enable Docker 
+  virtualisation.docker.enable = true;
 
   # Set system state version (do not change once set)
   system.stateVersion = "25.05";

@@ -10,10 +10,15 @@
     discord
     firefox
     pavucontrol
+    docker-compose
 
     # fonts
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
+
+    # languages
+    python313
+    python313Packages.pip
   ];
 
   # Enable XDG user directories
