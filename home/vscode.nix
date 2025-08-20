@@ -26,6 +26,8 @@
 
       userSettings = {
         "files.autoSave" = "afterDelay";
+        "explorer.confirmDelete" = false;
+        "explorer.confirmDragAndDrop" = false;
         "editor.fontFamily" = "FiraCode Nerd Font Mono";
         "editor.fontWeight" = 500;
         "editor.fontSize" = 14;
@@ -34,7 +36,9 @@
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
         "workbench.iconTheme" = "icons";
         "workbench.colorTheme" = "Cursor Dark Core";
+        "workbench.editor.empty.hint" = "hidden";
         "github.copilot.nextEditSuggestions.enabled" = true;
+        "python.analysis.typeCheckingMode" = "strict";
         "[python]" = {
           "editor.tabSize" = 4;
         };
