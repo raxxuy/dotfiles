@@ -7,9 +7,11 @@
 
   home.packages = with pkgs; [
     bun
+    tree
     discord
     firefox
     pavucontrol
+    code-cursor
     docker-compose
 
     # fonts
