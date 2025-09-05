@@ -11,6 +11,8 @@
     discord
     firefox
     pavucontrol
+    arduino-ide
+    arduino-cli
     code-cursor
     docker-compose
 

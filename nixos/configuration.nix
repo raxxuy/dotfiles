@@ -28,6 +28,9 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   # Keyboard layout
   services.xserver.xkb = {
     layout = "us";
@@ -39,7 +42,7 @@
     shell = pkgs.fish;
     isNormalUser = true;
     description = "micho";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" ];
   };
 
   # Enable unfree packages
