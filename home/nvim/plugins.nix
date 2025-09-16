@@ -11,6 +11,8 @@
         nixd.enable = true;
         ts_ls.enable = true;
         cssls.enable = true;
+        dockerls.enable = true;
+        yamlls.enable = true;
       };
     };
 
@@ -24,29 +26,30 @@
         "html"
         "css"
         "scss"
+        "dockerfile"
+        "yaml"
       ];
     };
 
     cmp = {
       enable = true;
 
-      # These are completion sources — you can adjust as needed
       settings = {
         mapping = {
           "<C-n>" = "cmp.mapping.select_next_item()";
           "<C-p>" = "cmp.mapping.select_prev_item()";
           "<CR>" = "cmp.mapping.confirm({ select = true })";
           "<Tab>" = ''
-                        function(fallback)
-            						  local luasnip = require("luasnip")
-                          if cmp.visible() then
-                            cmp.select_next_item()
-                          elseif luasnip.expand_or_jumpable() then
-                            luasnip.expand_or_jump()
-                          else
-                            fallback()
-                          end
-                        end
+            function(fallback)
+              local luasnip = require("luasnip")
+              if cmp.visible() then
+                cmp.select_next_item()
+              elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+              else
+                fallback()
+              end
+            end
           '';
           "<S-Tab>" = ''
             function(fallback)
@@ -79,12 +82,21 @@
 
         formatters_by_ft = {
           nix = [ "nixpkgs_fmt" ];
-          typescript = [ "prettier" ];
-          tsx = [ "prettier" ];
-          javascript = [ "prettier" ];
-          scss = [ "prettier" ];
-          css = [ "prettier" ];
+          typescript = [ "prettierd" ];
+          tsx = [ "prettierd" ];
+          javascript = [ "prettierd" ];
+          scss = [ "prettierd" ];
+          css = [ "prettierd" ];
+          yaml = [ "prettierd" ];
+          json = [ "prettierd" ];
+          markdown = [ "prettierd" ];
         };
+
+        # Optional explicit prettierd formatter config
+        # formatters.prettierd = {
+        #   command = "prettierd";
+        #   args = [ "$FILENAME" ];
+        # };
       };
     };
 
@@ -102,3 +114,4 @@
     };
   };
 }
+

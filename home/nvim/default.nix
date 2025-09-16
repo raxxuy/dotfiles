@@ -25,6 +25,10 @@
   home.packages = with pkgs; [
     gcc
     nixd
-    nixpkgs-fmt # or alejandra
+    nixpkgs-fmt
+    hadolint
+    dockerfile-language-server-nodejs
+    yaml-language-server
+    prettierd
   ];
 }
