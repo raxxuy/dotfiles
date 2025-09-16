@@ -14,6 +14,7 @@
     arduino-ide
     arduino-cli
     code-cursor
+    libreoffice
     docker-compose
 
     # fonts
