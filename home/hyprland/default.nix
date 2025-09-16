@@ -17,6 +17,11 @@
     settings = {
       "$mod" = "Super";
       monitor = [ ",1920x1080@180,auto,1" ];
+
+      input = {
+        kb_layout = "us,mk";
+        kb_options = "grp:alt_shift_toggle";
+      };
     };
   };
 
