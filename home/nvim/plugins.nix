@@ -13,6 +13,7 @@
         cssls.enable = true;
         dockerls.enable = true;
         yamlls.enable = true;
+        basedpyright.enable = true;
       };
     };
 
@@ -28,6 +29,7 @@
         "scss"
         "dockerfile"
         "yaml"
+        "python"
       ];
     };
 
@@ -90,6 +92,7 @@
           yaml = [ "prettierd" ];
           json = [ "prettierd" ];
           markdown = [ "prettierd" ];
+          python = [ "black" ];
         };
 
         # Optional explicit prettierd formatter config

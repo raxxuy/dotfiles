@@ -25,10 +25,12 @@
   home.packages = with pkgs; [
     gcc
     nixd
-    nixpkgs-fmt
+    black
     hadolint
-    dockerfile-language-server-nodejs
-    yaml-language-server
     prettierd
+    nixpkgs-fmt
+    basedpyright
+    yaml-language-server
+    dockerfile-language-server
   ];
 }
