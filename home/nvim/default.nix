@@ -32,5 +32,6 @@
     basedpyright
     yaml-language-server
     dockerfile-language-server
+    tailwindcss-language-server
   ];
 }

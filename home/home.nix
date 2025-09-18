@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     bun
+    btop
     tree
     discord
     firefox

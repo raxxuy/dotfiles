@@ -4,6 +4,7 @@
     luasnip.enable = true; # Snippet engine for nvim-cmp
     neo-tree.enable = true;
     web-devicons.enable = true;
+    colorizer.enable = true;
 
     lsp = {
       enable = true;
@@ -14,6 +15,7 @@
         dockerls.enable = true;
         yamlls.enable = true;
         basedpyright.enable = true;
+        tailwindcss.enable = true;
       };
     };
 
@@ -85,7 +87,7 @@
         formatters_by_ft = {
           nix = [ "nixpkgs_fmt" ];
           typescript = [ "prettierd" ];
-          tsx = [ "prettierd" ];
+          typescriptreact = [ "prettierd" ];
           javascript = [ "prettierd" ];
           scss = [ "prettierd" ];
           css = [ "prettierd" ];

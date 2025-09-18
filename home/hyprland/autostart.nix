@@ -3,6 +3,7 @@
     exec-once = [
       "swww-daemon"
       "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false"
+      "ags run"
     ];
   };
 }
