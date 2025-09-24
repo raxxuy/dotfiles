@@ -1,5 +1,5 @@
 {
-  configName = "nixos-config";
+  configName = "dotfiles";
 
   terminal = "ghostty --gtk-single-instance=true";
   explorer = "nautilus";
