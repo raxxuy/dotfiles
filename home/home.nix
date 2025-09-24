@@ -7,10 +7,12 @@
 
   home.packages = with pkgs; [
     bun
+    nodejs_24
     btop
     tree
     discord
     firefox
+    kubectl
     pavucontrol
     arduino-ide
     arduino-cli

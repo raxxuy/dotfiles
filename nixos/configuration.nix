@@ -31,6 +31,12 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
+  # Kubernetes
+  services.k3s = {
+    enable = true;
+    role = "server";
+  };
+
   # Keyboard layout
   services.xserver.xkb = {
     layout = "us";
