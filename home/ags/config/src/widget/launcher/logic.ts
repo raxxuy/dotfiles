@@ -1,9 +1,9 @@
 import { createState } from "ags";
 import { Astal, Gdk, Gtk } from "ags/gtk4";
 import AstalApps from "gi://AstalApps";
-import { cursors, modifierType } from "../../globals";
+import { Cursors, ModifierType } from "../../globals";
 
-const { ALT_MASK, LOCK_MASK, NO_MODIFIER_MASK } = modifierType;
+const { ALT_MASK, LOCK_MASK, NO_MODIFIER_MASK } = ModifierType;
 const specialKeys = [Gdk.KEY_Shift_L, Gdk.KEY_Super_L, Gdk.KEY_Control_L];
 const apps = new AstalApps.Apps();
 
@@ -28,7 +28,7 @@ export const updateList = (value: string, icon: Gtk.Widget | null) => {
   current = 0;
 
   if (icon) {
-    icon.cursor = value ? cursors.pointer : cursors.default;
+    icon.cursor = value ? Cursors.Pointer : Cursors.Default;
   }
 };
 

@@ -1,6 +1,6 @@
 import { Accessor, For } from "ags";
 import AstalApps from "gi://AstalApps";
-import { orientation } from "../../../globals";
+import { Orientation } from "../../../globals";
 import AppListItem from "./AppListItem";
 
 interface AppListProps {
@@ -10,7 +10,7 @@ interface AppListProps {
 
 export default function AppList({ apps, onLaunch }: AppListProps) {
   return (
-    <box class="launcher-list" orientation={orientation.VERTICAL}>
+    <box class="launcher-list" orientation={Orientation.VERTICAL}>
       <For each={apps}>
         {(app) => <AppListItem app={app} onLaunch={onLaunch} />}
       </For>

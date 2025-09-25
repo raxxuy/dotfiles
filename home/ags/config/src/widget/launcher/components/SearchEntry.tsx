@@ -1,6 +1,6 @@
 import { Accessor } from "ags";
 import { Gtk } from "ags/gtk4";
-import { Props } from "../../../types";
+import { Props } from "../../../types/ags";
 
 interface SearchEntryProps
   extends Partial<Props<Gtk.Entry, Gtk.Entry.ConstructorProps>> {

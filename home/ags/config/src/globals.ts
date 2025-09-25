@@ -1,16 +1,10 @@
 import { Astal, Gdk, Gtk } from "ags/gtk4";
 
-export const {
-  WindowAnchor: windowAnchors,
-  Exclusivity: exclusivitiy,
-  Keymode: keymode,
-} = Astal;
+export const { Exclusivity, WindowAnchor, Keymode } = Astal;
+export const { Align, Orientation } = Gtk;
+export const { ModifierType } = Gdk;
 
-export const { Orientation: orientation, Align: align } = Gtk;
-
-export const { ModifierType: modifierType } = Gdk;
-
-export const cursors = {
-  default: Gdk.Cursor.new_from_name("default", null),
-  pointer: Gdk.Cursor.new_from_name("pointer", null),
+export const Cursors = {
+  Default: Gdk.Cursor.new_from_name("default", null),
+  Pointer: Gdk.Cursor.new_from_name("pointer", null),
 };

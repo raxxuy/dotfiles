@@ -1,27 +1,19 @@
 import { Gdk } from "ags/gtk4";
-import { exclusivitiy, windowAnchors } from "../../globals";
-import Workspaces from "./workspaces";
-
-const { TOP, LEFT, RIGHT } = windowAnchors;
+import Window from "../../components/Window";
+import Clock from "./Clock";
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
   return (
-    <window
-      visible
+    <Window
       name="bar"
+      class="Bar"
       gdkmonitor={gdkmonitor}
-      anchor={TOP | LEFT | RIGHT}
-      exclusivity={exclusivitiy.EXCLUSIVE}
+      exclusivity={"EXCLUSIVE"}
+      anchor={["TOP", "LEFT", "RIGHT"]}
     >
-      <centerbox>
-        <box $type="start" spacing={20}>
-        </box>
-        <box $type="center" spacing={20}>
-          <Workspaces />
-        </box>
-        <box $type="end" spacing={20}>
-        </box>
+      <centerbox cssName="centerbox">
+        <Clock $type="center" />
       </centerbox>
-    </window>
+    </Window>
   );
 }

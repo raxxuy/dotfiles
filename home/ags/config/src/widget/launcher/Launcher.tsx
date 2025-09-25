@@ -1,5 +1,5 @@
-import { With } from "ags";
-import { Gtk } from "ags/gtk4";
+import Gtk from "gi://Gtk?version=4.0";
+import { With } from "gnim";
 import Box from "../../components/Box";
 import Window from "../../components/Window";
 import { Align } from "../../globals";
