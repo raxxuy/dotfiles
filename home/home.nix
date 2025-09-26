@@ -13,6 +13,7 @@
     discord
     firefox
     kubectl
+    localsend
     pavucontrol
     arduino-ide
     arduino-cli
