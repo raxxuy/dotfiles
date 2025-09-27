@@ -25,11 +25,11 @@
     };
   };
 
-  home.file.".config/waypaper".source = ./waypaper;
+  home.file.".config/waypaper".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/hyprland/waypaper";
 
   home.packages = with pkgs; [
     swww
-    pywal16
     nautilus
     waypaper
     hyprshot

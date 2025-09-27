@@ -51,6 +51,7 @@
     ./theme.nix
     ./fish.nix
     ./git.nix
+    ./wal.nix
     ./hyprland
     ./nvim
     ./ags
