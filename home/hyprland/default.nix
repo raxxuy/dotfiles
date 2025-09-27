@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
@@ -24,6 +24,8 @@
       };
     };
   };
+
+  home.file.".config/waypaper".source = ./waypaper;
 
   home.packages = with pkgs; [
     swww
