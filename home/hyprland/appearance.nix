@@ -1,3 +1,4 @@
+{ config, ... }:
 let
   inherit (import ../../hosts/micho/variables.nix) animations blur;
 in
@@ -8,6 +9,7 @@ in
       resize_on_border = true;
       allow_tearing = true;
       snap.enabled = true;
+      "col.active_border" = "$color10";
     };
 
     decoration = {
@@ -46,5 +48,10 @@ in
       no_update_news = true;
       no_donation_nag = true;
     };
+
+    # Import pywal-generated colors
+    source = [
+      "${config.home.homeDirectory}/.cache/wal/colors-hyprland.conf"
+    ];
   };
 }

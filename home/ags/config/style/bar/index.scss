@@ -1,0 +1,47 @@
+@use "colors" as *;
+@use "workspaces";
+@use "clock";
+@use "media";
+@use "menu";
+
+window#bar {
+  background: transparent;
+  color: $foreground;
+  margin: 0 12px;
+
+  /* Font */
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+  font-weight: 700;
+
+  .container {
+    background: $background;
+    border-radius: 0 0 8px 8px;
+    padding: 0px 16px;
+
+    & > * {
+      padding: 0 8px;
+    }
+
+    & > *:first-child {
+      padding-left: 0;
+    }
+
+    & > *:last-child {
+      padding-right: 0;
+    }
+  }
+
+  #start {
+    @extend %workspaces;
+  }
+
+  #center {
+    @extend %clock;
+  }
+
+  #end {
+    @extend %media;
+    @extend %menu;
+  }
+}

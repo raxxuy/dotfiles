@@ -38,9 +38,7 @@ export default function Clock() {
         onLeave={handleMouseLeave}
       />
       <label
-        cssClasses={isHovered((hover) =>
-          hover ? ["clock", "hover"] : ["clock", "normal"]
-        )}
+        class={isHovered((hover) => `clock ${hover ? "hover" : "normal"}`)}
         label={time}
       />
     </box>

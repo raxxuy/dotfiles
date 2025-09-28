@@ -1,0 +1,29 @@
+@use "colors" as *;
+
+%workspaces {
+  .workspaces {
+    font-size: xx-small;
+
+    .workspace {
+      margin: 0 2px;
+      padding: 0 2px;
+      color: $foreground;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .occupied {
+      color: $color10;
+    }
+
+    .active {
+      color: $color11;
+    }
+  }
+}

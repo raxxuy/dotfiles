@@ -1,8 +1,8 @@
+import { Astal } from "ags/gtk4";
 import app from "ags/gtk4/app";
 import Bar from "./src/widget/bar";
-import style from "./style.scss";
-import { Astal, Gtk } from "ags/gtk4";
-import Launcher from "./src/widget/launcher/Launcher";
+import Launcher from "./src/widget/launcher";
+import style from "./style/index.scss";
 
 app.start({
   css: style,

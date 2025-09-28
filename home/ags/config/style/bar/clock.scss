@@ -1,0 +1,9 @@
+%clock {
+  .clock {
+    transition: 100ms;
+
+    &.hover {
+      padding: 0 4px;
+    }
+  }
+}

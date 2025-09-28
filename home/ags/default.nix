@@ -12,11 +12,12 @@ in
 
     extraPackages = [
       inputs.astal.packages.${pkgs.system}.apps
-      inputs.astal.packages.${pkgs.system}.bluetooth
-      inputs.astal.packages.${pkgs.system}.hyprland
-      inputs.astal.packages.${pkgs.system}.notifd
-      inputs.astal.packages.${pkgs.system}.wireplumber
       inputs.astal.packages.${pkgs.system}.tray
+      inputs.astal.packages.${pkgs.system}.mpris
+      inputs.astal.packages.${pkgs.system}.notifd
+      inputs.astal.packages.${pkgs.system}.hyprland
+      inputs.astal.packages.${pkgs.system}.bluetooth
+      inputs.astal.packages.${pkgs.system}.wireplumber
     ];
   };
 }
