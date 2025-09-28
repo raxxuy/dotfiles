@@ -48,16 +48,23 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  # Kubernetes
-  services.k3s = {
-    enable = true;
-    role = "server";
-  };
+  services = {
+    # Kubernetes
+    k3s = {
+      enable = true;
+      role = "server";
+    };
 
-  # Keyboard layout
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+    # Keyboard layout
+    xserver.xkb = {
+      layout = "us";
+      variant = "";
+    };
+
+    gvfs = {
+      enable = true;
+      package = pkgs.gnome.gvfs;
+    };
   };
 
   # Define a user

@@ -19,7 +19,6 @@
       ];
 
       enabledSnippets = with spicePkgs.snippets; [
-        rotatingCoverart
       ];
 
       theme = spicePkgs.themes.turntable;
