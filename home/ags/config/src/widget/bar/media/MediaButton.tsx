@@ -1,6 +1,6 @@
 import AstalMpris from "gi://AstalMpris";
 import Pango from "gi://Pango";
-import { createBinding } from "gnim";
+import { createBinding, createComputed } from "gnim";
 import { Cursors } from "../../../globals";
 
 interface MediaButtonProps {
@@ -14,6 +14,11 @@ export default function MediaButton({ player }: MediaButtonProps) {
     player?.play_pause();
   };
 
+  const fullTitle = createComputed(
+    [createBinding(player!, "title"), createBinding(player!, "artist")],
+    (title, artist) => `${title} - ${artist}`
+  );
+
   return player ? (
     <>
       <button
@@ -25,6 +30,7 @@ export default function MediaButton({ player }: MediaButtonProps) {
       {"  "}
       <label
         class="media-title"
+        tooltipText={fullTitle}
         maxWidthChars={30}
         ellipsize={Pango.EllipsizeMode.END}
         label={createBinding(player, "title")}
