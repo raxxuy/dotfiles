@@ -1,8 +1,14 @@
+@use "colors" as *;
+@use "mixins" as *;
+
 %media {
   .media {
-    .media-title,
-    .media-no-player {
-      font-size: small;
+    font-size: small;
+
+    .media-popover {
+      @include overlay-border($color10, 1px);
+      background: $background;
+      margin: 10px 6px 0;
     }
   }
 }

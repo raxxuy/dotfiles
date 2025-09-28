@@ -22,6 +22,7 @@ export default function Launcher() {
       $={setWindow}
       name="launcher"
       class="Launcher"
+      visible={false}
       anchor={["TOP", "BOTTOM", "LEFT", "RIGHT"]}
       exclusivity={"IGNORE"}
       keymode={"EXCLUSIVE"}

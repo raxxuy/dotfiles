@@ -5,7 +5,7 @@
   .menu {
     .menu-popover {
       @include overlay-border($color10, 1px);
-      margin: 8px 4px 0;
+      margin: 8px 6px 0;
       border-radius: 8px;
       background: $background;
     }
