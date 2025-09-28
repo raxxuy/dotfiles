@@ -30,6 +30,7 @@
 
   home.packages = with pkgs; [
     swww
+    pywal16
     nautilus
     waypaper
     hyprshot

@@ -1,17 +1,31 @@
 #!/run/current-system/sw/bin/bash
-wallpaper=$1
-wal -i $wallpaper
-source ~/.config/fish/config.fish
+wallpaper="$1"
 
-# Run ags commands in a subshell to prevent directory change
-(ags quit | ags run)
-sleep 1
+echo "Setting wallpaper and generating color scheme for: $wallpaper"
 
-# Kill background Ghostty process
-bg_pids=$(pgrep -f "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false")
-if [ -n "$bg_pids" ]; then
-    kill $bg_pids
-    sleep 1
+wal -i "$wallpaper"
+
+echo "Applying new colors..."
+
+if [ -f "$HOME/.cache/wal/colors.fish" ]; then
+    fish -c "source $HOME/.cache/wal/colors.fish"
+    echo "Fish colors updated in real time."
+else
+    echo "Warning: Fish color file not found at $HOME/.cache/wal/colors.fish"
 fi
 
-ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false
+(ags quit; ags run) &
+ags_pid=$! # Store the PID of the background process
+echo "AGs quit and run initiated in the background (PID: $ags_pid)."
+
+echo "Restarting Ghostty for new colors..."
+
+pkill -f "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false --working-directory=$HOME"
+
+sleep 1
+
+ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false --working-directory=$HOME &
+ghostty_pid=$!
+echo "New Ghostty instance opened (PID: $ghostty_pid)."
+
+echo "Script finished."
