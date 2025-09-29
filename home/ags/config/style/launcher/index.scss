@@ -1,0 +1,56 @@
+@use "colors" as *;
+@use "sass:color";
+
+window#launcher {
+  font-family: "SF Pro Display";
+  font-size: medium;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.8);
+
+  .launcher-entry {
+    background: $background;
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    // focus doesn't work ??
+    // &:focus {
+    //   background: color.scale($background, $lightness: 20%);
+    // }
+
+    selection {
+      background: color.scale($background, $lightness: 20%);
+    }
+
+    &.empty {
+      color: color.scale(white, $lightness: -40%);
+    }
+  }
+
+  .launcher-list {
+    margin-top: 16px;
+  }
+
+  .launcher-item {
+    transition: all 0.1s;
+    background: transparent;
+    color: $foreground;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    padding: 8px 12px;
+
+    &:focus {
+      background: color.scale($background, $lightness: 10%);
+      color: color.scale($foreground, $lightness: 10%);
+      font-size: large;
+    }
+
+    image {
+      margin-right: 8px;
+    }
+  }
+
+  .launcher-no-results {
+    color: #888;
+    margin-top: 16px;
+  }
+}

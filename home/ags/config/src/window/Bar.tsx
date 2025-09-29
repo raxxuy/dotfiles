@@ -1,9 +1,9 @@
 import { Gdk } from "ags/gtk4";
-import Window from "../../components/Window";
-import Clock from "./clock";
-import Media from "./media";
-import Menu from "./menu";
-import Workspaces from "./workspaces";
+import Window from "../components/Window";
+import Clock from "../widget/bar/Clock";
+import Media from "../widget/bar/Media";
+import Menu from "../widget/bar/Menu";
+import Workspaces from "../widget/bar/Workspaces";
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
   return (
