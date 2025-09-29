@@ -123,7 +123,7 @@ export default function Main({ window, entry, setEntry }: MainProps) {
           onChange={updateList}
           onActivate={onActivate}
         />
-        <AppList apps={list} onLaunch={launch} />
+        <AppList apps={list} window={window} onLaunch={launch} />
         <With
           value={createComputed(
             [list, search],
