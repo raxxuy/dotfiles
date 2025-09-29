@@ -23,7 +23,6 @@
   };
 
   home.packages = with pkgs; [
-    gcc
     nixd
     black
     hadolint

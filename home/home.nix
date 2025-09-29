@@ -6,28 +6,22 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    bun
-    nodejs_24
     btop
     tree
+    pavucontrol
+
+    # applications
     discord
     firefox
-    kubectl
     localsend
-    pavucontrol
     arduino-ide
     arduino-cli
     code-cursor
     libreoffice
-    docker-compose
 
     # fonts
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
-
-    # languages
-    python313
-    python313Packages.pip
   ];
 
   # Enable XDG user directories
