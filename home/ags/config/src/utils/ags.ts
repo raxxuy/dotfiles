@@ -18,10 +18,6 @@ import { mapAccessor } from "./base";
 function toEnumProp<T>(
   enumObject: any,
   value: T | T[] | Accessor<T | T[]>
-): number | Accessor<number>;
-function toEnumProp<T>(
-  enumObject: any,
-  value: T | T[] | Accessor<T | T[]>
 ): number | Accessor<number> {
   const getEnumValue = (enumValue: T | T[]): number => {
     if (Array.isArray(enumValue)) {

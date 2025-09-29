@@ -48,7 +48,7 @@ export default function Workspaces() {
   hypr.connect("notify::focused-workspace", updateWorkspaces);
 
   return (
-    <box class="workspaces">
+    <box class="workspaces" spacing={8}>
       <For each={workspaces}>
         {(workspace) => (
           <button

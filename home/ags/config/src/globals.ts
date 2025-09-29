@@ -1,7 +1,7 @@
 import { Astal, Gdk, Gtk } from "ags/gtk4";
 
 export const { Exclusivity, WindowAnchor, Keymode } = Astal;
-export const { Align, Orientation } = Gtk;
+export const { Align, Orientation, EventControllerScrollFlags } = Gtk;
 export const { ModifierType } = Gdk;
 
 export const Cursors = {

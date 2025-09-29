@@ -3,6 +3,7 @@ import Window from "../components/Window";
 import Clock from "../widget/bar/Clock";
 import Media from "../widget/bar/Media";
 import Menu from "../widget/bar/Menu";
+import Status from "../widget/bar/Status";
 import Workspaces from "../widget/bar/Workspaces";
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
@@ -15,14 +16,15 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
       anchor={["TOP", "LEFT", "RIGHT"]}
     >
       <centerbox cssName="centerbox">
-        <box class="container" name="start" $type="start">
+        <box class="container" name="start" $type="start" spacing={16}>
           <Workspaces />
         </box>
-        <box class="container" name="center" $type="center">
+        <box class="container" name="center" $type="center" spacing={16}>
           <Clock />
         </box>
-        <box class="container" name="end" $type="end">
+        <box class="container" name="end" $type="end" spacing={16}>
           <Media />
+          <Status />
           <Menu />
         </box>
       </centerbox>
