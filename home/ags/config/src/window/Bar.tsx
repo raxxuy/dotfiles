@@ -4,6 +4,7 @@ import Clock from "../widget/bar/Clock";
 import Media from "../widget/bar/Media";
 import Menu from "../widget/bar/Menu";
 import Status from "../widget/bar/Status";
+import Tray from "../widget/bar/Tray";
 import Workspaces from "../widget/bar/Workspaces";
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
@@ -23,6 +24,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
           <Clock />
         </box>
         <box class="container" name="end" $type="end" spacing={16}>
+          <Tray />
           <Media />
           <Status />
           <Menu />

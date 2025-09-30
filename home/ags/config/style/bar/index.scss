@@ -5,6 +5,7 @@
 @use "clock";
 @use "media";
 @use "menu";
+@use "tray";
 
 window#bar {
   background: transparent;
@@ -24,7 +25,7 @@ window#bar {
 
   tooltip {
     @include overlay-border($color10, 1px);
-    background: black;
+    background: $background;
     margin-top: 4px;
     padding: 4px;
     font-size: smaller;
@@ -39,6 +40,7 @@ window#bar {
   }
 
   #end {
+    @extend %tray;
     @extend %media;
     @extend %status;
     @extend %menu;

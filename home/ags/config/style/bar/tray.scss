@@ -1,0 +1,37 @@
+@use "colors" as *;
+@use "mixins" as *;
+@use "sass:color";
+
+%tray {
+  .tray {
+    .tray-item {
+      .menu {
+        @include overlay-border($color10, 1px);
+        background: $background;
+        margin-top: 6px;
+        padding: 3px;
+        font-size: small;
+
+        separator {
+          border-color: color.scale($foreground, $lightness: -80%);
+          border: solid 0.2px;
+          margin: 3px 0;
+        }
+
+        .vertical > .flat {
+          padding: 3px;
+          margin: 2px 0;
+          border-radius: 4px;
+
+          &:disabled {
+            color: color.scale($foreground, $lightness: -20%);
+          }
+
+          &:hover {
+            background: color.scale($background, $lightness: 20%);
+          }
+        }
+      }
+    }
+  }
+}
