@@ -15,6 +15,9 @@ export default function Audio() {
     else endpoint.set_volume(Math.max(0, endpoint.volume - 0.05));
   };
 
+  const muteEndpoint = (endpoint: AstalWp.Endpoint) =>
+    (endpoint.mute = !endpoint.mute);
+
   return (
     <>
       <box spacing={4} tooltipText={createBinding(speaker, "description")}>
@@ -26,11 +29,13 @@ export default function Audio() {
           class="status-speaker"
           label={createBinding(speaker, "volume")((v) => `${roundVolume(v)}%`)}
         />
-        <image
-          class="status-speaker-icon"
-          iconName={createBinding(speaker, "volumeIcon")}
-          pixelSize={14}
-        />
+        <button onClicked={() => muteEndpoint(speaker)}>
+          <image
+            class="status-speaker-icon"
+            iconName={createBinding(speaker, "volumeIcon")}
+            pixelSize={14}
+          />
+        </button>
       </box>
       <box spacing={4} tooltipText={createBinding(microphone, "description")}>
         <Gtk.EventControllerScroll
@@ -44,11 +49,13 @@ export default function Audio() {
             "volume"
           )((v) => `${roundVolume(v)}%`)}
         />
-        <image
-          class="status-microphone-icon"
-          iconName={createBinding(microphone, "volumeIcon")}
-          pixelSize={14}
-        />
+        <button onClicked={() => muteEndpoint(microphone)}>
+          <image
+            class="status-microphone-icon"
+            iconName={createBinding(microphone, "volumeIcon")}
+            pixelSize={14}
+          />
+        </button>
       </box>
     </>
   );
