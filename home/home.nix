@@ -22,6 +22,7 @@
     # fonts
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
+    noto-fonts-cjk-sans
   ];
 
   # Enable XDG user directories
