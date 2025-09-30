@@ -8,6 +8,7 @@
       window-padding-y = 10;
       background-opacity = 0.8;
       theme = "/home/micho/.cache/wal/ghostty.conf";
+      gtk-toolbar-style = "flat";
     };
   };
 }
