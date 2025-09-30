@@ -27,7 +27,6 @@ export default function MediaButton({ player }: MediaButtonProps) {
         onClicked={handlePlayback}
         label={createBinding(player, "playbackStatus")((p) => icons[p])}
       />
-      {"  "}
       <label
         class="media-title"
         tooltipText={fullTitle}

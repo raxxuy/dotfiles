@@ -28,7 +28,7 @@ export default function Media() {
     <box>
       <With value={player}>
         {(player) => (
-          <box class="media">
+          <box class="media" spacing={12}>
             <MediaButton player={player} />
           </box>
         )}
