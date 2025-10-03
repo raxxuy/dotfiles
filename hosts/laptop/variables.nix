@@ -1,10 +1,17 @@
 {
   configName = "dotfiles";
+  type = "laptop";
 
+  # Hyprland-specific
   terminal = "ghostty --gtk-single-instance=true";
   explorer = "nautilus";
   launcher = "ags toggle launcher";
   animations = true;
+
+  blur = {
+    size = 8;
+    passes = 3;
+  };
 
   # Git
   git = {
@@ -19,9 +26,8 @@
     size = 20;
   };
 
-  # Blur
-  blur = {
-    size = 8;
-    passes = 3;
+  # Ghostty
+  ghostty = {
+    font-size = 16;
   };
 }

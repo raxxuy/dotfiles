@@ -1,6 +1,6 @@
-let
-  inherit (import ../../hosts/micho/variables.nix) terminal explorer launcher;
+{ vars, ... }:
 
+let
   mod = "$mod";
 
   baseBinds = [
@@ -8,9 +8,9 @@ let
     "${mod}, right, movefocus, r"
     "${mod}, up, movefocus, u"
     "${mod}, down, movefocus, d"
-    "${mod}, Q, exec, ${terminal}"
-    "${mod}, E, exec, ${explorer}"
-    "${mod}, R, exec, ${launcher}"
+    "${mod}, Q, exec, ${vars.terminal}"
+    "${mod}, E, exec, ${vars.explorer}"
+    "${mod}, R, exec, ${vars.launcher}"
     "${mod}, C, killactive"
     "${mod}, F, togglefloating"
     "${mod}, M, exit"

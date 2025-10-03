@@ -19,6 +19,7 @@
   outputs = inputs @ { nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
+      vars = import ./hosts { host = "laptop"; };
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -32,7 +33,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               users.micho = import ./home/home.nix;
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = { inherit inputs vars; };
             };
           }
         ];

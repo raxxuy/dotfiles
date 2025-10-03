@@ -1,13 +1,11 @@
-{ pkgs, ... }:
-let
-  inherit (import ../hosts/micho/variables.nix) cursor;
-in
+{ vars, pkgs, ... }:
+
 {
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.${cursor.package};
-    name = cursor.name;
-    size = cursor.size;
+    package = pkgs.${vars.cursor.package};
+    name = vars.cursor.name;
+    size = vars.cursor.size;
   };
 
   gtk = {

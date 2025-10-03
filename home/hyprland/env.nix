@@ -1,11 +1,10 @@
-let
-  inherit (import ../../hosts/micho/variables.nix) cursor;
-in
+{ vars, ... }:
+
 {
   wayland.windowManager.hyprland.settings = {
     env = [
-      "XCURSOR_SIZE, ${builtins.toString cursor.size}"
-      "XCURSOR_THEME, ${cursor.name}"
+      "XCURSOR_SIZE, ${builtins.toString vars.cursor.size}"
+      "XCURSOR_THEME, ${vars.cursor.name}"
     ];
   };
 }

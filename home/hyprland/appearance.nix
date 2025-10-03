@@ -1,7 +1,5 @@
-{ config, ... }:
-let
-  inherit (import ../../hosts/micho/variables.nix) animations blur;
-in
+{ vars, config, ... }:
+
 {
   wayland.windowManager.hyprland.settings = {
     general = {
@@ -14,8 +12,8 @@ in
 
     decoration = {
       blur = {
-        size = blur.size;
-        passes = blur.passes;
+        size = vars.blur.size;
+        passes = vars.blur.passes;
         new_optimizations = true;
         xray = true;
         popups = true;
@@ -26,7 +24,7 @@ in
     };
 
     animations = {
-      enabled = animations;
+      enabled = vars.animations;
     };
 
     misc = {
