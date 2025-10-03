@@ -10,12 +10,13 @@
       enable = true;
       servers = {
         nixd.enable = true;
-        ts_ls.enable = true;
         cssls.enable = true;
-        dockerls.enable = true;
+        ts_ls.enable = true;
         yamlls.enable = true;
-        basedpyright.enable = true;
+        dockerls.enable = true;
         tailwindcss.enable = true;
+        basedpyright.enable = true;
+        kotlin_language_server.enable = true;
       };
     };
 
@@ -32,6 +33,7 @@
         "dockerfile"
         "yaml"
         "python"
+        "kotlin"
       ];
     };
 
@@ -95,6 +97,7 @@
           json = [ "prettierd" ];
           markdown = [ "prettierd" ];
           python = [ "black" ];
+          kotlin = [ "ktlint" ];
         };
 
         # Optional explicit prettierd formatter config

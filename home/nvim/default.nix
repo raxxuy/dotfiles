@@ -25,11 +25,13 @@
   home.packages = with pkgs; [
     nixd
     black
+    ktlint
     hadolint
     prettierd
     nixpkgs-fmt
     basedpyright
     yaml-language-server
+    kotlin-language-server
     dockerfile-language-server
     tailwindcss-language-server
   ];
