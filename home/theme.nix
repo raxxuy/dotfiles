@@ -1,9 +1,25 @@
 { pkgs, globalConfig, ... }:
 
 let
+  theme = globalConfig.theme.theme;
   cursor = globalConfig.theme.cursor;
+  iconTheme = globalConfig.theme.iconTheme;
 in
 {
+  gtk = {
+    enable = true;
+
+    theme = {
+      package = pkgs.${theme.package};
+      name = theme.name;
+    };
+
+    iconTheme = {
+      package = pkgs.${iconTheme.package};
+      name = iconTheme.name;
+    };
+  };
+
   home.pointerCursor = {
     gtk.enable = true;
     package = pkgs.${cursor.package};

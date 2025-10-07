@@ -23,6 +23,9 @@
   networking.hostName = globalConfig.hostName;
   networking.networkmanager.enable = true;
 
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   services.gvfs.enable = true;
 
   users.users.${globalConfig.user} =

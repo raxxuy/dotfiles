@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    ags.url = "github:aylur/ags";
 
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -26,7 +27,7 @@
             (import ./config/users/${user}.nix { inherit lib; }));
 
       globalConfig = loadConfig {
-        host = "desktop";
+        host = "laptop";
         user = "micho";
       };
     in

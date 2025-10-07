@@ -16,4 +16,8 @@
       enabled = true;
     };
   };
+
+  ghostty = {
+    font-size = 12;
+  };
 }

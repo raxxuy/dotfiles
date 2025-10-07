@@ -13,7 +13,11 @@
     };
 
     animations = {
-      enabled = false;
+      enabled = true;
     };
+  };
+
+  ghostty = {
+    font-size = 16;
   };
 }

@@ -1,13 +1,18 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    nautilus
-    hyprshot
-    hyprpicker
-    imagemagick
-    brightnessctl
-  ];
+  home.packages =
+    let
+      ags = inputs.ags.packages.${pkgs.system}.default;
+    in
+    [
+      ags
+      pkgs.nautilus
+      pkgs.hyprshot
+      pkgs.hyprpicker
+      pkgs.imagemagick
+      pkgs.brightnessctl
+    ];
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -17,6 +22,7 @@
       "$mod" = "Super";
 
       exec-once = [
+        "ags run"
         "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false --working-directory=$HOME"
       ];
 
