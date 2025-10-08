@@ -18,6 +18,6 @@
   };
 
   ghostty = {
-    font-size = 16;
+    font-size = 14;
   };
 }

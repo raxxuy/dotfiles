@@ -1,18 +1,13 @@
-{ inputs, pkgs, ... }:
+{ config, globalConfig, pkgs, ... }:
 
 {
-  home.packages =
-    let
-      ags = inputs.ags.packages.${pkgs.system}.default;
-    in
-    [
-      ags
-      pkgs.nautilus
-      pkgs.hyprshot
-      pkgs.hyprpicker
-      pkgs.imagemagick
-      pkgs.brightnessctl
-    ];
+  home.packages = with pkgs; [
+    nautilus
+    hyprshot
+    hyprpicker
+    imagemagick
+    brightnessctl
+  ];
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -22,7 +17,7 @@
       "$mod" = "Super";
 
       exec-once = [
-        "ags run"
+        "/home/micho/dotfiles/home/ags/result/bin/my-shell"
         "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false --working-directory=$HOME"
       ];
 
@@ -31,6 +26,10 @@
       input = {
         kb_layout = "us,mk";
         kb_options = "grp:alt_shift_toggle";
+      };
+
+      debug = {
+        disable_logs = false;
       };
     };
   };
