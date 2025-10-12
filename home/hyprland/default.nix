@@ -1,5 +1,8 @@
 { config, globalConfig, pkgs, ... }:
 
+let
+  ags_bin = "${config.home.homeDirectory}/${globalConfig.dotfilesName}/home/ags/result/bin/my-shell";
+in
 {
   home.packages = with pkgs; [
     nautilus
@@ -17,7 +20,7 @@
       "$mod" = "Super";
 
       exec-once = [
-        "/home/micho/dotfiles/home/ags/result/bin/my-shell"
+        "${ags_bin}"
         "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false --working-directory=$HOME"
       ];
 
