@@ -10,10 +10,16 @@
     discord
     firefox
     code-cursor-fhs
+    jetbrains.idea-ultimate
+    jetbrains.pycharm-professional
 
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
   ];
+
+  home.sessionVariables = {
+    QML2_IMPORT_PATH = "/etc/profiles/per-user/micho/lib/qt-6/qml";
+  };
 
   imports = [
     ./ghostty.nix
@@ -23,5 +29,6 @@
     ./nvim.nix
     ./git.nix
     ./hyprland
+    ./quickshell
   ];
 }

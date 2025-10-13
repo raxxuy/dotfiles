@@ -2,7 +2,6 @@
 
 let
   mod = "$mod";
-  ags_bin = "${config.home.homeDirectory}/${globalConfig.dotfilesName}/home/ags/result/bin/my-shell";
 
   baseBinds = [
     "${mod}, left, movefocus, l"
@@ -12,7 +11,6 @@ let
     "${mod}, Q, exec, ghostty --gtk-single-instance=true"
     "${mod}, E, exec, nautilus"
     "${mod}, R, exec, ags toggle launcher"
-    "${mod}, A, exec, ${ags_bin} quit; ${ags_bin}"
     "${mod}, C, killactive"
     "${mod}, F, togglefloating"
     "${mod}, M, exit"
