@@ -9,12 +9,13 @@
     tree
     discord
     firefox
-    code-cursor-fhs
     jetbrains.idea-ultimate
     jetbrains.pycharm-professional
 
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
+
+    python3
   ];
 
   home.sessionVariables = {
@@ -22,13 +23,13 @@
   };
 
   imports = [
+    ./caelestia.nix
     ./ghostty.nix
-    ./vscode.nix
     ./theme.nix
     ./fish.nix
     ./nvim.nix
     ./git.nix
+    ./zed.nix
     ./hyprland
-    ./quickshell
   ];
 }

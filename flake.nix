@@ -12,16 +12,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = inputs @ { nixpkgs, home-manager, ... }:
     let
-      system = "x86_64-linux";
       lib = nixpkgs.lib;
+      system = "x86_64-linux";
 
       loadConfig = { host, user }:
         lib.recursiveUpdate
@@ -36,11 +36,9 @@
       };
     in
     {
-      nixosConfigurations.${globalConfig.hostName} = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.${globalConfig.hostName} = lib.nixosSystem {
         inherit system;
-
         specialArgs = { inherit inputs globalConfig; };
-
         modules = [
           ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
@@ -56,3 +54,4 @@
       };
     };
 }
+

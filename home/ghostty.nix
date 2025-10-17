@@ -14,6 +14,7 @@ in
       window-padding-y = 10;
       background-opacity = 0.8;
       gtk-toolbar-style = "flat";
+      theme = "Vesper";
     };
   };
 }

@@ -38,7 +38,6 @@
         enable = true;
         servers = {
           nixd.enable = true;
-          qmlls.enable = true;
         };
       };
 
@@ -46,7 +45,6 @@
         enable = true;
         settings.ensure_installed = [
           "nix"
-          "qml"
         ];
       };
 
