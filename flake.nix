@@ -16,19 +16,31 @@
       url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
-  outputs = inputs @ { nixpkgs, home-manager, ... }:
+  outputs =
+    inputs@{
+      nixpkgs,
+      home-manager,
+      ...
+    }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
 
-      loadConfig = { host, user }:
-        lib.recursiveUpdate
-          (import ./config/default.nix { inherit lib; })
-          (lib.recursiveUpdate
-            (import ./config/hosts/${host}.nix { inherit lib; })
-            (import ./config/users/${user}.nix { inherit lib; }));
+      loadConfig =
+        { host, user }:
+        lib.recursiveUpdate (import ./config/default.nix { inherit lib; }) (
+          lib.recursiveUpdate (import ./config/hosts/${host}.nix { inherit lib; }) (
+            import ./config/users/${user}.nix { inherit lib; }
+          )
+        );
 
       globalConfig = loadConfig {
         host = "desktop";
@@ -54,4 +66,3 @@
       };
     };
 }
-

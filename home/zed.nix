@@ -15,7 +15,7 @@
         light = "One Light";
         dark = "macOS Classic Dark";
       };
-      
+
       autosave = {
         after_delay = {
           milliseconds = 50;
@@ -29,8 +29,6 @@
           };
         };
       };
-      
-      
     };
   };
 }
