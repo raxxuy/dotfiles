@@ -1,4 +1,9 @@
-{ config, globalConfig, pkgs, ... }:
+{
+  config,
+  globalConfig,
+  pkgs,
+  ...
+}:
 
 {
   home.packages = with pkgs; [
@@ -7,6 +12,8 @@
     hyprpicker
     imagemagick
     brightnessctl
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
   ];
 
   wayland.windowManager.hyprland = {
@@ -39,4 +46,3 @@
     ./appearance.nix
   ];
 }
-

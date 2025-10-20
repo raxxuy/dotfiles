@@ -20,17 +20,17 @@ let
   ];
 
   workspaceBinds = builtins.concatLists (
-    builtins.genList
-      (i:
-        let
-          ws = if i == 9 then 10 else (i + 1);
-          keyNum = if i == 9 then "0" else builtins.toString (i + 1);
-        in
-        [
-          "${mod}, ${keyNum}, workspace, ${builtins.toString ws}"
-          "${mod} SHIFT, ${keyNum}, movetoworkspace, ${builtins.toString ws}"
-        ]
-      ) 10
+    builtins.genList (
+      i:
+      let
+        ws = if i == 9 then 10 else (i + 1);
+        keyNum = if i == 9 then "0" else builtins.toString (i + 1);
+      in
+      [
+        "${mod}, ${keyNum}, workspace, ${builtins.toString ws}"
+        "${mod} SHIFT, ${keyNum}, movetoworkspace, ${builtins.toString ws}"
+      ]
+    ) 10
   );
 
   mouseBinds = [
@@ -60,7 +60,6 @@ let
     "Ctrl+Super, Backslash, centerwindow, 1"
     "Ctrl+Super+Alt, Backslash, resizeactive, exact 55% 70%"
   ];
-
 in
 {
   wayland.windowManager.hyprland.settings = {
@@ -69,4 +68,3 @@ in
     bindl = multimediaBinds;
   };
 }
-

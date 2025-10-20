@@ -25,19 +25,25 @@
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
-
   services.gvfs.enable = true;
+  services.upower.enable = true;
+  services.power-profiles-daemon.enable = true;
 
-  users.users.${globalConfig.user} =
-    {
-      shell = pkgs.fish;
-      isNormalUser = true;
-      description = globalConfig.description;
-      extraGroups = [ "networkmanager" "wheel" ];
-    };
+  users.users.${globalConfig.user} = {
+    shell = pkgs.fish;
+    isNormalUser = true;
+    description = globalConfig.description;
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+  };
 
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   programs.fish.enable = true;
   programs.hyprland.enable = true;

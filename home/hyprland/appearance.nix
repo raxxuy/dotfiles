@@ -10,6 +10,7 @@ in
       resize_on_border = true;
       allow_tearing = true;
       snap.enabled = true;
+      "col.active_border" = "rgb($primary_paletteKeyColor)";
     };
 
     decoration = {
@@ -49,5 +50,9 @@ in
       no_update_news = true;
       no_donation_nag = true;
     };
+
+    source = [
+      "${config.home.homeDirectory}/.config/hypr/scheme/current.conf"
+    ];
   };
 }
