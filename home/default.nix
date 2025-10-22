@@ -17,6 +17,7 @@
   imports = [
     ./caelestia.nix
     ./ghostty.nix
+    ./spotify.nix
     ./theme.nix
     ./fish.nix
     ./nvim.nix

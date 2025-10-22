@@ -7,11 +7,18 @@
 
   programs.zed-editor = {
     enable = true;
-    installRemoteServer = true;
 
     userSettings = {
       vim_mode = true;
-      
+
+      agent = {
+        default_model = {
+          provider = "copilot_chat";
+          model = "gpt-5-mini";
+        };
+        model_parameters = [ ];
+      };
+
       theme = {
         mode = "dark";
         light = "One Light";
@@ -32,7 +39,7 @@
         };
       };
     };
-    
+
     extensions = [
       "nix"
       "html"
