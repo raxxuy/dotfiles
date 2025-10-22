@@ -28,6 +28,7 @@
   services.gvfs.enable = true;
   services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   users.users.${globalConfig.user} = {
     shell = pkgs.fish;

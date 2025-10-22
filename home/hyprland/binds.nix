@@ -1,4 +1,4 @@
-{ config, globalConfig, ... }:
+{ ... }:
 
 let
   mod = "$mod";
@@ -44,6 +44,7 @@ let
     ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     ",XF86MonBrightnessUp, exec, caelestia brightnessUp"
     ",XF86MonBrightnessDown, exec, caelestia brightnessDown"
+    "ALT, Shift_L, exec, hyprctl switchxkblayout main next"
   ];
 
   caelestiaBinds = [

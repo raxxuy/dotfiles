@@ -1,6 +1,4 @@
 {
-  config,
-  globalConfig,
   pkgs,
   ...
 }:
@@ -32,7 +30,6 @@
 
       input = {
         kb_layout = "us,mk";
-        kb_options = "grp:alt_shift_toggle";
       };
 
       debug = {

@@ -10,6 +10,8 @@
     installRemoteServer = true;
 
     userSettings = {
+      vim_mode = true;
+      
       theme = {
         mode = "dark";
         light = "One Light";
@@ -30,5 +32,13 @@
         };
       };
     };
+    
+    extensions = [
+      "nix"
+      "html"
+      "macos-classic"
+      "dockerfile"
+      "docker-compose"
+    ];
   };
 }
