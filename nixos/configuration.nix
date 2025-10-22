@@ -37,6 +37,11 @@
   services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  security.polkit.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    gparted
+  ];
 
   users.users.${globalConfig.user} = {
     shell = pkgs.fish;
