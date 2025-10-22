@@ -20,8 +20,16 @@
     };
   };
 
-  networking.hostName = globalConfig.hostName;
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = globalConfig.hostName;
+    networkmanager.enable = true;
+
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 53317 ];
+      allowedUDPPorts = [ 53317 ];
+    };
+  };
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;

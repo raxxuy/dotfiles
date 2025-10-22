@@ -8,6 +8,8 @@
   home.packages = with pkgs; [
     tree
     discord
+    localsend
+    pavucontrol
     jetbrains.idea-ultimate
 
     nerd-fonts.fira-code
