@@ -6,8 +6,10 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
+    vlc
     tree
     discord
+    gparted
     localsend
     pavucontrol
     jetbrains.idea-ultimate

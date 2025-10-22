@@ -43,6 +43,7 @@
     extensions = [
       "nix"
       "html"
+      "toml"
       "macos-classic"
       "dockerfile"
       "docker-compose"
