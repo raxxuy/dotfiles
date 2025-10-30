@@ -35,6 +35,9 @@
     };
   };
 
+  xdg.userDirs.enable = true;
+  xdg.userDirs.createDirectories = true;
+
   imports = [
     ./caelestia.nix
     ./ghostty.nix
