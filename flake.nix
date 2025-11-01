@@ -23,18 +23,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-
-    auto-cpufreq = {
-      url = "github:AdnanHodzic/auto-cpufreq";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
     inputs@{
       nixpkgs,
       home-manager,
-      auto-cpufreq,
       ...
     }:
     let
@@ -60,7 +54,6 @@
         specialArgs = { inherit inputs globalConfig; };
         modules = [
           ./nixos/configuration.nix
-          auto-cpufreq.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {

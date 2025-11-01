@@ -37,6 +37,7 @@
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  services.power-profiles-daemon.enable = true;
   services.xserver.displayManager.gdm.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -61,21 +62,6 @@
 
   programs.fish.enable = true;
   programs.hyprland.enable = true;
-
-  programs.auto-cpufreq = {
-    enable = true;
-    settings = {
-      charger = {
-        governor = "performance";
-        turbo = "auto";
-      };
-
-      battery = {
-        governor = "powersave";
-        turbo = "auto";
-      };
-    };
-  };
 
   system.stateVersion = "25.05";
 }
