@@ -33,7 +33,6 @@
     }:
     let
       lib = nixpkgs.lib;
-      system = "x86_64-linux";
 
       loadConfig =
         { host, user }:
@@ -50,7 +49,6 @@
     in
     {
       nixosConfigurations.${globalConfig.hostName} = lib.nixosSystem {
-        inherit system;
         specialArgs = { inherit inputs globalConfig; };
         modules = [
           ./nixos/configuration.nix

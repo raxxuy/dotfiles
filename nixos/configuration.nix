@@ -36,9 +36,9 @@
   security.polkit.enable = true;
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
+  services.displayManager.gdm.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.power-profiles-daemon.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
 
   environment.systemPackages = with pkgs; [
     gparted
@@ -61,6 +61,7 @@
   ];
 
   programs.fish.enable = true;
+  programs.nix-ld.enable = true;
   programs.hyprland.enable = true;
 
   system.stateVersion = "25.05";
