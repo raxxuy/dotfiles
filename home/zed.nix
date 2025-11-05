@@ -46,6 +46,7 @@
       "toml"
       "scss"
       "biome"
+      "pylsp"
       "git-firefly"
       "macos-classic"
       "dockerfile"

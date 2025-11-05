@@ -20,17 +20,18 @@ let
   ];
 
   workspaceBinds = builtins.concatLists (
-    builtins.genList (
-      i:
-      let
-        ws = if i == 9 then 10 else (i + 1);
-        keyNum = if i == 9 then "0" else builtins.toString (i + 1);
-      in
-      [
-        "${mod}, ${keyNum}, workspace, ${builtins.toString ws}"
-        "${mod} SHIFT, ${keyNum}, movetoworkspace, ${builtins.toString ws}"
-      ]
-    ) 10
+    builtins.genList
+      (
+        i:
+        let
+          ws = if i == 9 then 10 else (i + 1);
+          keyNum = if i == 9 then "0" else builtins.toString (i + 1);
+        in
+        [
+          "${mod}, ${keyNum}, workspace, ${builtins.toString ws}"
+          "${mod} SHIFT, ${keyNum}, movetoworkspace, ${builtins.toString ws}"
+        ]
+      ) 10
   );
 
   mouseBinds = [
@@ -48,23 +49,27 @@ let
   ];
 
   caelestiaBinds = [
-    "Super, R, global, caelestia:launcher"
-    "Super, mouse:272, global, caelestia:launcherInterrupt"
-    "Super, mouse:273, global, caelestia:launcherInterrupt"
+    "${mod}, R, global, caelestia:launcher"
+    "${mod}, mouse:272, global, caelestia:launcherInterrupt"
+    "${mod}, mouse:273, global, caelestia:launcherInterrupt"
+  ];
+
+  customShellBinds = [
+    "${mod}, W, exec, /home/micho/Public/ags/result/bin/leta-shell toggle wallpapers"
   ];
 
   windowActionBinds = [
-    "Super+Shift, left, movewindow, l"
-    "Super+Shift, right, movewindow, r"
-    "Super+Shift, up, movewindow, u"
-    "Super+Shift, down, movewindow, d"
+    "${mod}+Shift, left, movewindow, l"
+    "${mod}+Shift, right, movewindow, r"
+    "${mod}+Shift, up, movewindow, u"
+    "${mod}+Shift, down, movewindow, d"
     "Ctrl+Super, Backslash, centerwindow, 1"
     "Ctrl+Super+Alt, Backslash, resizeactive, exact 55% 70%"
   ];
 in
 {
   wayland.windowManager.hyprland.settings = {
-    bind = baseBinds ++ workspaceBinds ++ caelestiaBinds ++ windowActionBinds;
+    bind = baseBinds ++ workspaceBinds ++ caelestiaBinds ++ windowActionBinds ++ customShellBinds;
     bindm = mouseBinds;
     bindl = multimediaBinds;
   };

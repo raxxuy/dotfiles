@@ -7,6 +7,8 @@
 
   home.packages = with pkgs; [
     vlc
+    btop
+    sass
     tree
     discord
     localsend
@@ -16,7 +18,7 @@
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
   ];
-  
+
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit = {
       Description = "polkit-gnome-authentication-agent-1";
