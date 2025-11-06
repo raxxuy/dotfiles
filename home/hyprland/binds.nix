@@ -55,7 +55,7 @@ let
   ];
 
   customShellBinds = [
-    "${mod}, W, exec, /home/micho/Public/ags/result/bin/leta-shell toggle wallpapers"
+    "${mod}, W, exec, /home/micho/Public/ags/build/bin/leta-shell toggle wallpapers"
   ];
 
   windowActionBinds = [

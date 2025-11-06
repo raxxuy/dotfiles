@@ -8,10 +8,12 @@
   home.packages = with pkgs; [
     vlc
     btop
-    sass
     tree
+    pywal16
     discord
+    dart-sass
     localsend
+    imagemagick
     pavucontrol
     jetbrains.idea-ultimate
 

@@ -5,7 +5,7 @@
     enable = true;
     interactiveShellInit = ''
       	set fish_greeting
-        cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
+        cat ~/.cache/leta-shell/wal/sequences 2> /dev/null
     '';
   };
 }

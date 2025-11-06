@@ -10,7 +10,7 @@ in
       resize_on_border = true;
       allow_tearing = true;
       snap.enabled = true;
-      "col.active_border" = "rgb($primary_paletteKeyColor)";
+      "col.active_border" = "$color11";
     };
 
     decoration = {
@@ -52,7 +52,7 @@ in
     };
 
     source = [
-      "${config.home.homeDirectory}/.config/hypr/scheme/current.conf"
+      "${config.home.homeDirectory}/.cache/leta-shell/wal/colors-hyprland.conf"
     ];
   };
 }
