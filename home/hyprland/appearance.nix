@@ -10,7 +10,7 @@ in
       resize_on_border = true;
       allow_tearing = true;
       snap.enabled = true;
-      "col.active_border" = "$color11";
+      "col.active_border" = "$color10";
     };
 
     decoration = {
