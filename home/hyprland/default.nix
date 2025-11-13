@@ -1,5 +1,6 @@
-{ pkgs
-, ...
+{
+  pkgs,
+  ...
 }:
 
 {
@@ -39,6 +40,7 @@
 
   imports = [
     ./binds.nix
+    ./rules.nix
     ./appearance.nix
   ];
 }

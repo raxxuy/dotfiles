@@ -57,6 +57,7 @@ let
   customShellBinds = [
     "${mod}, L, exec, /home/micho/Public/leta-shell/build/bin/leta-shell"
     "${mod}+Shift, L, exec, /home/micho/Public/leta-shell/build/bin/leta-shell quit"
+    "${mod}, R, exec, /home/micho/Public/leta-shell/build/bin/leta-shell toggle launcher"
     "${mod}, W, exec, /home/micho/Public/leta-shell/build/bin/leta-shell toggle wallpapers"
   ];
 
