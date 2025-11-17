@@ -44,7 +44,7 @@
   xdg.userDirs.createDirectories = true;
 
   imports = [
-    ./caelestia.nix
+    ./leta-shell.nix
     ./ghostty.nix
     ./spotify.nix
     ./theme.nix

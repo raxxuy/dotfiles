@@ -20,18 +20,17 @@ let
   ];
 
   workspaceBinds = builtins.concatLists (
-    builtins.genList
-      (
-        i:
-        let
-          ws = if i == 9 then 10 else (i + 1);
-          keyNum = if i == 9 then "0" else builtins.toString (i + 1);
-        in
-        [
-          "${mod}, ${keyNum}, workspace, ${builtins.toString ws}"
-          "${mod} SHIFT, ${keyNum}, movetoworkspace, ${builtins.toString ws}"
-        ]
-      ) 10
+    builtins.genList (
+      i:
+      let
+        ws = if i == 9 then 10 else (i + 1);
+        keyNum = if i == 9 then "0" else builtins.toString (i + 1);
+      in
+      [
+        "${mod}, ${keyNum}, workspace, ${builtins.toString ws}"
+        "${mod} SHIFT, ${keyNum}, movetoworkspace, ${builtins.toString ws}"
+      ]
+    ) 10
   );
 
   mouseBinds = [
@@ -56,10 +55,10 @@ let
   ];
 
   customShellBinds = [
-    "${mod}, L, exec, /home/micho/Public/leta-shell/build/bin/leta-shell"
-    "${mod}+Shift, L, exec, /home/micho/Public/leta-shell/build/bin/leta-shell quit"
-    "${mod}, R, exec, /home/micho/Public/leta-shell/build/bin/leta-shell toggle launcher"
-    "${mod}, W, exec, /home/micho/Public/leta-shell/build/bin/leta-shell toggle wallpapers"
+    "${mod}, L, exec, leta-shell"
+    "${mod}+Shift, L, exec, leta-shell quit"
+    "${mod}, R, exec, leta-shell toggle launcher"
+    "${mod}, W, exec, leta-shell toggle wallpapers"
   ];
 
   windowActionBinds = [

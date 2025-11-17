@@ -21,8 +21,7 @@
       "$mod" = "Super";
 
       exec-once = [
-        "/home/micho/Public/leta-shell/build/bin/leta-shell"
-        #  "caelestia-shell"
+        "leta-shell"
         "ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false --working-directory=$HOME"
       ];
 
