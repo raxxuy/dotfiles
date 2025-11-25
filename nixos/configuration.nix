@@ -55,6 +55,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.rocmSupport = true;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"

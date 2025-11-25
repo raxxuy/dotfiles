@@ -20,6 +20,8 @@
 
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
+    
+    rocmPackages.rocm-smi
   ];
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
