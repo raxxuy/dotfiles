@@ -6,7 +6,6 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    eog
     vlc
     btop
     tree
@@ -50,6 +49,7 @@
     ./ghostty.nix
     ./spotify.nix
     ./theme.nix
+    ./fonts.nix
     ./fish.nix
     ./nvim.nix
     ./git.nix

@@ -21,6 +21,7 @@ in
         new_optimizations = true;
         xray = true;
         popups = true;
+        brightness = 0.9;
         noise = 0;
       };
 

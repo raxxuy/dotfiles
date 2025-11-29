@@ -5,6 +5,7 @@
 
     nixvim = {
       url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     home-manager = {
@@ -20,6 +21,11 @@
 
     leta-shell = {
       url = "github:raxxuy/leta-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    apple-fonts = {
+      url = "github:raxxuy/apple-fonts.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

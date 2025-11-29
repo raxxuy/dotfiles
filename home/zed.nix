@@ -38,6 +38,10 @@
           };
         };
       };
+
+      project_panel = {
+        hide_gitignore = true;
+      };
     };
 
     extensions = [
