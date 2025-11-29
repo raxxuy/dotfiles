@@ -9,11 +9,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1763857935,
-        "narHash": "sha256-oZCv7FbfjUb07MxZbCAmtPFN+z1rTNL6lNrHPykn5WQ=",
+        "lastModified": 1764289441,
+        "narHash": "sha256-ak+lgFiYE5PHByN1/BRkO5JP498hno6Ix24C1Qf/vec=",
         "owner": "aylur",
         "repo": "ags",
-        "rev": "7d6493656c160bedde29716e3eb391180ad538b1",
+        "rev": "e169694390548dfd38ff40f1ef2163d6c3ffe3ea",
         "type": "github"
       },
       "original": {
@@ -42,6 +42,27 @@
         "type": "github"
       }
     },
+    "apple-fonts_2": {
+      "inputs": {
+        "nixpkgs": [
+          "leta-shell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1764341330,
+        "narHash": "sha256-cEWXJhborzoWd6OLpTz5tqkIxXl5IZX61zEqfpHnGUg=",
+        "owner": "raxxuy",
+        "repo": "apple-fonts.nix",
+        "rev": "e5096589ff76ff33a1e3f6e16d3039f459470843",
+        "type": "github"
+      },
+      "original": {
+        "owner": "raxxuy",
+        "repo": "apple-fonts.nix",
+        "type": "github"
+      }
+    },
     "astal": {
       "inputs": {
         "nixpkgs": [
@@ -51,11 +72,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762012522,
-        "narHash": "sha256-ncEN4OVFM5M9VFc4oR3gOI5K8r99GcYxtU+Cf4Z8pbs=",
+        "lastModified": 1764173295,
+        "narHash": "sha256-Jh4VtPcK2Ov+RTcV9FtyQRsxiJmXFQGfqX6jjM7/mgc=",
         "owner": "aylur",
         "repo": "astal",
-        "rev": "671d4229c798834190a50fb8b8d8addd19b529e9",
+        "rev": "7d1fac8a4b2a14954843a978d2ddde86168c75ef",
         "type": "github"
       },
       "original": {
@@ -154,16 +175,17 @@
     "leta-shell": {
       "inputs": {
         "ags": "ags",
+        "apple-fonts": "apple-fonts_2",
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1764219972,
-        "narHash": "sha256-w3aCXcxFXXchzZrziWDB8HHHxH1uVycvX9kFHkQdGk0=",
+        "lastModified": 1764419964,
+        "narHash": "sha256-KgpqQcMhpW50GKNoozexSgKwGIC4XCD5f1w0XhlTQw8=",
         "owner": "raxxuy",
         "repo": "leta-shell",
-        "rev": "ff0a82bc05e319915fad9c339b8479c2a8e522c0",
+        "rev": "2a5c56de5a6df9e17fa005fc6f230fef54557289",
         "type": "github"
       },
       "original": {
@@ -214,11 +236,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1764385708,
-        "narHash": "sha256-OW19qwRisjzD1vQknzGXbZ5yqtULI1FU1f6HZdKn5TA=",
+        "lastModified": 1764418392,
+        "narHash": "sha256-4/kXVct+EK/ODr0H1SvWwXGBhk1v6gCj1+mQl6duz1s=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "96d3538c32816992f30d858095aa93c9ee32fd45",
+        "rev": "9d6a7608df21df7593ae1b9a552173d7cc2597c4",
         "type": "github"
       },
       "original": {
@@ -335,11 +357,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764350280,
-        "narHash": "sha256-H8VpXvqEHll38N3YIaZUtqn7BSrq3SRfCL8idWvVRLw=",
+        "lastModified": 1764414951,
+        "narHash": "sha256-pZ2m2JmTTMyqiKB8WSigsSvAeoShI6OSRhzBuRO9SVY=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "504383097cbd6793aa62d1ec2d90d67ce7e4542e",
+        "rev": "10d2aa53ada9b14f6df2f9877d6a057f0a2b262f",
         "type": "github"
       },
       "original": {
