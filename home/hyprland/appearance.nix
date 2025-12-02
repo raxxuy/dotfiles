@@ -18,7 +18,7 @@ in
         enabled = hyprland.blur.enabled;
         size = hyprland.blur.size;
         passes = hyprland.blur.passes;
-        new_optimizations = true;
+        # new_optimizations = true;
         xray = true;
         popups = true;
         brightness = 0.9;

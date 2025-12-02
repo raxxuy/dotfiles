@@ -10,7 +10,6 @@ let
     "${mod}, down, movefocus, d"
     "${mod}, Q, exec, ghostty --gtk-single-instance=true"
     "${mod}, E, exec, nautilus"
-    "${mod}, R, exec, ags toggle launcher"
     "${mod}, C, killactive"
     "${mod}, F, togglefloating"
     "${mod}, M, exit"
