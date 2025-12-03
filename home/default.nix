@@ -19,18 +19,18 @@
 
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
-    
+
     rocmPackages.rocm-smi
   ];
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit = {
       Description = "polkit-gnome-authentication-agent-1";
-      Wants = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
+      Wants = [ "hyprland.target" ];
+      After = [ "hyprland.target" ];
     };
     Install = {
-      WantedBy = [ "graphical-session.target" ];
+      WantedBy = [ "hyprland.target" ];
     };
     Service = {
       Type = "simple";
@@ -43,6 +43,12 @@
 
   xdg.userDirs.enable = true;
   xdg.userDirs.createDirectories = true;
+
+  xdg.portal = {
+    enable = true;
+    config.common.default = "hyprland";
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  };
 
   imports = [
     ./leta-shell.nix

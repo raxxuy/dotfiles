@@ -36,7 +36,6 @@
   security.polkit.enable = true;
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
-  services.displayManager.gdm.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.power-profiles-daemon.enable = true;
 

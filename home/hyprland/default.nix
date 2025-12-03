@@ -9,8 +9,6 @@
     hyprshot
     hyprpicker
     brightnessctl
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
   ];
 
   wayland.windowManager.hyprland = {
