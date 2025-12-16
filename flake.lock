@@ -135,11 +135,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765885150,
-        "narHash": "sha256-+EWNzlKTzL7Or2t+hOHuQyC75d8OpH9neV9ELyrAxDA=",
+        "lastModified": 1765886289,
+        "narHash": "sha256-pPaQ2UgzPr4yfx6v6qGddS04puer//JV35xlBw0utwY=",
         "owner": "raxxuy",
         "repo": "leta-shell",
-        "rev": "a3e4dfbf9051a1067b8e2af2dffcbd8eaccda6ed",
+        "rev": "b1a1f1b49b13cf9087d656746f594fbe0f74144f",
         "type": "github"
       },
       "original": {
