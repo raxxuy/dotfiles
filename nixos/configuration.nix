@@ -38,6 +38,7 @@
   hardware.bluetooth.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.power-profiles-daemon.enable = true;
+  virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
     gparted
@@ -50,6 +51,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
   };
 

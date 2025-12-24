@@ -18,8 +18,8 @@
         marketplace
       ];
 
-      enabledSnippets = with spicePkgs.snippets; [
-      ];
+      # enabledSnippets = with spicePkgs.snippets; [
+      # ];
 
       theme = spicePkgs.themes.turntable;
     };

@@ -15,7 +15,8 @@
     localsend
     imagemagick
     pavucontrol
-    jetbrains.idea-ultimate
+    docker-compose
+    jetbrains.idea
 
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
