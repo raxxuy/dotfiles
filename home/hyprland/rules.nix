@@ -3,11 +3,11 @@
 {
   wayland.windowManager.hyprland.settings = {
     layerrule = [
-      "noanim, leta-shell"
-      "blur, leta-shell"
-      "blurpopups, leta-shell"
-      "ignorezero, leta-shell"
-      "xray 1, leta-shell"
+      "no_anim on, match:namespace leta-shell"
+      "blur on, match:namespace leta-shell"
+      "blur_popups on, match:namespace leta-shell"
+      "ignore_alpha 0.3, match:namespace leta-shell"
+      "xray on, match:namespace leta-shell"
     ];
   };
 }

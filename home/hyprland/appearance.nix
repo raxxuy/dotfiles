@@ -6,6 +6,7 @@ in
 {
   wayland.windowManager.hyprland.settings = {
     general = {
+      border_size = 2;
       gaps_out = 10;
       resize_on_border = true;
       allow_tearing = true;
@@ -25,6 +26,7 @@ in
         noise = 0;
       };
 
+      rounding = 8;
       shadow.enabled = hyprland.shadow.enabled;
     };
 
