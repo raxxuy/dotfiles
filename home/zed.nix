@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     nil
+    nix-ld
   ];
 
   programs.zed-editor = {
@@ -31,16 +32,51 @@
         };
       };
 
+      project_panel = {
+        hide_gitignore = true;
+      };
+
       lsp = {
-        nix = {
-          binary = {
-            path_lookup = true;
+        biome = {
+          settings = {
+            require_config_file = false;
           };
         };
       };
 
-      project_panel = {
-        hide_gitignore = true;
+      languages = {
+        TypeScript = {
+          formatter = {
+            language_server = {
+              name = "biome";
+            };
+          };
+          language_servers = [
+            "biome"
+            "!vtsls"
+            "..."
+          ];
+          code_actions_on_format = {
+            "source.fixAll.biome" = true;
+            "source.organizeImports.biome" = true;
+          };
+        };
+        TSX = {
+          formatter = {
+            language_server = {
+              name = "biome";
+            };
+          };
+          language_servers = [
+            "biome"
+            "!vtsls"
+            "..."
+          ];
+          code_actions_on_format = {
+            "source.fixAll.biome" = true;
+            "source.organizeImports.biome" = true;
+          };
+        };
       };
     };
 

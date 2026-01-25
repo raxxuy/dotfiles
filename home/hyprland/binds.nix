@@ -47,16 +47,11 @@ let
     "ALT, Shift_L, exec, hyprctl switchxkblayout main next"
   ];
 
-  caelestiaBinds = [
-    "${mod}, R, global, caelestia:launcher"
-    "${mod}, mouse:272, global, caelestia:launcherInterrupt"
-    "${mod}, mouse:273, global, caelestia:launcherInterrupt"
-  ];
-
   customShellBinds = [
     "${mod}, L, exec, leta-shell"
     "${mod}+Shift, L, exec, leta-shell quit"
     "${mod}, R, exec, leta-shell toggle launcher"
+    "${mod}, SPACE, exec, leta-shell toggle launcher"
     "${mod}, W, exec, leta-shell toggle wallpapers"
   ];
 
@@ -71,7 +66,7 @@ let
 in
 {
   wayland.windowManager.hyprland.settings = {
-    bind = baseBinds ++ workspaceBinds ++ caelestiaBinds ++ windowActionBinds ++ customShellBinds;
+    bind = baseBinds ++ workspaceBinds ++ windowActionBinds ++ customShellBinds;
     bindm = mouseBinds;
     bindl = multimediaBinds;
   };
