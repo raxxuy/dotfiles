@@ -1,4 +1,4 @@
-{ pkgs, globalConfig, ... }:
+{ pkgs, globalConfig, inputs, ... }:
 
 {
   imports = [
@@ -42,6 +42,7 @@
 
   environment.systemPackages = with pkgs; [
     gparted
+    inputs.matugen.packages.${system}.default
   ];
 
   users.users.${globalConfig.user} = {

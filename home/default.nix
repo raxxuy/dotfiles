@@ -9,20 +9,20 @@
     vlc
     btop
     tree
-    pywal16
     discord
-    dart-sass
     localsend
-    imagemagick
     pavucontrol
     docker-compose
     jetbrains.idea
+    obs-studio
 
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
 
     rocmPackages.rocm-smi
   ];
+
+  home.sessionVariables = globalConfig.sessionVariables;
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit = {
@@ -49,6 +49,11 @@
     enable = true;
     config.common.default = "hyprland";
     extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  };
+
+  xdg.terminal-exec = {
+    enable = true;
+    settings.default = [ "ghostty.desktop" ];
   };
 
   imports = [

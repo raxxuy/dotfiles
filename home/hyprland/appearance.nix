@@ -11,7 +11,7 @@ in
       resize_on_border = true;
       allow_tearing = true;
       snap.enabled = true;
-      "col.active_border" = "$color10";
+      "col.active_border" = "$primary";
     };
 
     decoration = {
@@ -55,7 +55,7 @@ in
     };
 
     source = [
-      "${config.home.homeDirectory}/.cache/leta-shell/wal/colors-hyprland.conf"
+      "${config.home.homeDirectory}/.config/hypr/colors.conf"
     ];
   };
 }

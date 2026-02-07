@@ -23,11 +23,11 @@ let
       i:
       let
         ws = if i == 9 then 10 else (i + 1);
-        keyNum = if i == 9 then "0" else builtins.toString (i + 1);
+        keyNum = if i == 9 then "0" else toString (i + 1);
       in
       [
-        "${mod}, ${keyNum}, workspace, ${builtins.toString ws}"
-        "${mod} SHIFT, ${keyNum}, movetoworkspace, ${builtins.toString ws}"
+        "${mod}, ${keyNum}, workspace, ${toString ws}"
+        "${mod} SHIFT, ${keyNum}, movetoworkspace, ${toString ws}"
       ]
     ) 10
   );
@@ -51,7 +51,7 @@ let
     "${mod}, L, exec, leta-shell"
     "${mod}+Shift, L, exec, leta-shell quit"
     "${mod}, R, exec, leta-shell toggle launcher"
-    "${mod}, SPACE, exec, leta-shell toggle launcher"
+    "ALT, SPACE, exec, leta-shell toggle launcher"
     "${mod}, W, exec, leta-shell toggle wallpapers"
   ];
 

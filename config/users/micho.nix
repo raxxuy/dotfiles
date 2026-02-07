@@ -8,4 +8,9 @@
     name = "raxxuy";
     email = "milanilkov@gmail.com";
   };
+
+  sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "zeditor";
+  };
 }
