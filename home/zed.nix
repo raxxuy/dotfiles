@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     nil
-    nix-ld
   ];
 
   programs.zed-editor = {

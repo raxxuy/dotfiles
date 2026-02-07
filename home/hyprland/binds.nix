@@ -49,10 +49,10 @@ let
 
   customShellBinds = [
     "${mod}, L, exec, leta-shell"
-    "${mod}+Shift, L, exec, leta-shell quit"
-    "${mod}, R, exec, leta-shell toggle launcher"
-    "ALT, SPACE, exec, leta-shell toggle launcher"
-    "${mod}, W, exec, leta-shell toggle wallpapers"
+    "${mod}+Shift, L, exec, leta-cli quit"
+    "${mod}, R, exec, leta-cli toggle launcher"
+    "ALT, SPACE, exec, leta-cli toggle launcher"
+    "${mod}, W, exec, leta-cli toggle wallpapers"
   ];
 
   windowActionBinds = [
