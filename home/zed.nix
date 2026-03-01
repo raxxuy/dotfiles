@@ -41,6 +41,14 @@
             require_config_file = false;
           };
         };
+        "tailwindcss-language-server" = {
+          settings = {
+            classFunctions = ["cva" "cx" "clsx"];
+            experimental = {
+              classRegex = ["[cls|class|className]\\s\\:\\=\\s\"([^\"]*)"];
+            };
+          };
+        };
       };
 
       languages = {
