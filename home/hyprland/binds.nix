@@ -62,6 +62,10 @@ let
     "${mod}+Shift, down, movewindow, d"
     "Ctrl+Super, Backslash, centerwindow, 1"
     "Ctrl+Super+Alt, Backslash, resizeactive, exact 55% 70%"
+    "${mod}, period, layoutmsg, move +col"
+    "${mod}, comma, layoutmsg, move -col"
+    "${mod} SHIFT, period, layoutmsg, swapcol r"
+    "${mod} SHIFT, comma, layoutmsg, swapcol l"
   ];
 in
 {

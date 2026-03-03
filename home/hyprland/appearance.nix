@@ -12,6 +12,13 @@ in
       allow_tearing = true;
       snap.enabled = true;
       "col.active_border" = "$primary";
+      layout = "scrolling";
+    };
+
+    scrolling = {
+      fullscreen_on_one_column = true;
+      column_width = 0.9;
+      direction = "right";
     };
 
     decoration = {

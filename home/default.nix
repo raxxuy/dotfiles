@@ -15,6 +15,7 @@
     docker-compose
     jetbrains.idea
     obs-studio
+    obsidian
 
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
