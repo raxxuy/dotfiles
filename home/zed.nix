@@ -43,9 +43,13 @@
         };
         "tailwindcss-language-server" = {
           settings = {
-            classFunctions = ["cva" "cx" "clsx"];
+            classFunctions = [
+              "cva"
+              "cx"
+              "clsx"
+            ];
             experimental = {
-              classRegex = ["[cls|class|className]\\s\\:\\=\\s\"([^\"]*)"];
+              classRegex = [ "[cls|class|className]\\s\\:\\=\\s\"([^\"]*)" ];
             };
           };
         };
@@ -66,6 +70,7 @@
           code_actions_on_format = {
             "source.fixAll.biome" = true;
             "source.organizeImports.biome" = true;
+            "source.action.useSortedInterfaceMembers.biome" = true;
           };
         };
         TSX = {
