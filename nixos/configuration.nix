@@ -31,6 +31,16 @@
     };
   };
 
+  security.rtkit.enable = true;
+
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    wireplumber.enable = true;
+  };
+
   services.gvfs.enable = true;
   services.upower.enable = true;
   security.polkit.enable = true;
@@ -42,7 +52,7 @@
 
   environment.systemPackages = with pkgs; [
     gparted
-    inputs.matugen.packages.${system}.default
+    inputs.matugen.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   users.users.${globalConfig.user} = {
@@ -67,5 +77,5 @@
   programs.nix-ld.enable = true;
   programs.hyprland.enable = true;
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "26.05";
 }

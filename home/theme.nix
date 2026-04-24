@@ -19,6 +19,10 @@ in
       name = theme.name;
     };
 
+    gtk4 = {
+      theme = config.gtk.theme;
+    };
+
     iconTheme = {
       package = pkgs.${iconTheme.package};
       name = iconTheme.name;

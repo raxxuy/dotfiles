@@ -22,7 +22,7 @@
       theme = {
         mode = "dark";
         light = "One Light";
-        dark = "macOS Classic Dark";
+        dark = "Catppuccin Mocha - No Italics";
       };
 
       autosave = {

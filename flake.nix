@@ -25,7 +25,7 @@
     };
 
     leta-shell = {
-      url = "github:raxxuy/leta-shell";
+      url = "github:raxxuy/leta-shell/new";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

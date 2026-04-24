@@ -47,12 +47,12 @@ let
     "ALT, Shift_L, exec, hyprctl switchxkblayout main next"
   ];
 
-  customShellBinds = [
+  letaShellBinds = [
     "${mod}, L, exec, leta-shell"
-    "${mod}+Shift, L, exec, leta-cli quit"
-    "${mod}, R, exec, leta-cli toggle launcher"
-    "ALT, SPACE, exec, leta-cli toggle launcher"
-    "${mod}, W, exec, leta-cli toggle wallpapers"
+    "${mod}+Shift, L, exec, leta-shell quit"
+    "${mod}, W, exec, leta-shell toggle wallpaper-selector"
+    "${mod}, R, exec, leta-shell toggle launcher"
+    "ALT, SPACe, exec, leta-shell toggle launcher"
   ];
 
   windowActionBinds = [
@@ -70,7 +70,7 @@ let
 in
 {
   wayland.windowManager.hyprland.settings = {
-    bind = baseBinds ++ workspaceBinds ++ windowActionBinds ++ customShellBinds;
+    bind = baseBinds ++ workspaceBinds ++ windowActionBinds ++ letaShellBinds;
     bindm = mouseBinds;
     bindl = multimediaBinds;
   };

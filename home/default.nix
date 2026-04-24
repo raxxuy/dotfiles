@@ -3,27 +3,57 @@
 {
   home.username = globalConfig.user;
   home.homeDirectory = "/home/${globalConfig.user}";
-  home.stateVersion = "25.05";
+  home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
-    vlc
-    btop
+    # cli
     tree
-    discord
-    localsend
-    pavucontrol
+    btop
+    deepfilternet
     docker-compose
-    jetbrains.idea
-    obs-studio
-    obsidian
 
+    # programs
+    vlc
+    discord
+    obsidian
+    localsend
+    obs-studio
+    pavucontrol
+
+    # dev
+    jetbrains.idea
+    jetbrains.webstorm
+
+    # fonts
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
+    noto-fonts-cjk-sans
 
+    # gpu
     rocmPackages.rocm-smi
   ];
 
-  home.sessionVariables = globalConfig.sessionVariables;
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "zeditor";
+    LADSPA_PATH = "${pkgs.deepfilternet}/lib/ladspa";
+  };
+
+  systemd.user.services.deepfilternet = {
+    Unit = {
+      Description = "DeepFilterNet Noise Suppression";
+      After = [ "pipewire.service" ];
+    };
+
+    Service = {
+      ExecStart = "${pkgs.deepfilternet}/bin/deep-filter pipewire";
+      Restart = "always";
+    };
+
+    Install = {
+      WantedBy = [ "default.target" ];
+    };
+  };
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit = {
@@ -45,6 +75,7 @@
 
   xdg.userDirs.enable = true;
   xdg.userDirs.createDirectories = true;
+  xdg.userDirs.setSessionVariables = false;
 
   xdg.portal = {
     enable = true;
