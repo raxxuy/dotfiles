@@ -26,7 +26,7 @@
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 53317 ];
+      allowedTCPPorts = [ 53317 8384 ];
       allowedUDPPorts = [ 53317 ];
     };
   };
@@ -39,6 +39,12 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     wireplumber.enable = true;
+  };
+  
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    guiAddress = "0.0.0.0:8384";
   };
 
   services.gvfs.enable = true;
