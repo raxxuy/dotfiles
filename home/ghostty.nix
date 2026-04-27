@@ -13,7 +13,7 @@ in
       window-padding-x = 10;
       window-padding-y = 10;
       background-opacity = 0.8;
-      theme = "Matugen";
+      theme = "leta-shell";
       gtk-toolbar-style = "flat";
     };
   };

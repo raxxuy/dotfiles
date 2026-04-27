@@ -62,7 +62,7 @@ in
     };
 
     source = [
-      "${config.home.homeDirectory}/.config/hypr/colors.conf"
+      "${config.home.homeDirectory}/.config/hypr/leta-shell.conf"
     ];
   };
 }
