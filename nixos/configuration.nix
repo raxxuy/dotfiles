@@ -62,10 +62,10 @@
     settings = {
       devices = {
         "pc" = {
-          id = "REGVHPE-ONOK54H-IPFGPUD-XXVMZ6A-BD6SZZS-AP4BABO-OSMKUC3-FVL6KQD";
+          id = "IZZD5ZF-QMQ2VA6-VLX5W2N-FKY26OB-3EJJWJK-2HDHCYL-YQNTCCX-CFJMJQN";
         };
         "laptop" = {
-          id = "DDWU3BM-NA6QZSD-TA2WNIS-Z4XIMDW-NS4A5BA-HA5GUPM-I4AEZ6M-5X7FAA7";
+          id = "KLTQBQD-7T6ZV4Y-SXZAJKG-3HVJCR4-4UTQU7L-EJX3R7M-SA27UMG-O35B7QB";
         };
       };
       folders = {
