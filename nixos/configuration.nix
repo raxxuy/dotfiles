@@ -1,4 +1,9 @@
-{ pkgs, globalConfig, inputs, ... }:
+{
+  pkgs,
+  globalConfig,
+  inputs,
+  ...
+}:
 
 {
   imports = [
@@ -26,7 +31,10 @@
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 53317 8384 ];
+      allowedTCPPorts = [
+        53317
+        8384
+      ];
       allowedUDPPorts = [ 53317 ];
     };
   };
@@ -40,11 +48,36 @@
     pulse.enable = true;
     wireplumber.enable = true;
   };
-  
+
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
     guiAddress = "0.0.0.0:8384";
+    guiPasswordFile = "/etc/syncthing/password";
+
+    user = "${globalConfig.user}";
+    dataDir = "/home/${globalConfig.user}/.config/syncthing";
+    configDir = "/home/${globalConfig.user}/.config/syncthing";
+
+    settings = {
+      devices = {
+        "pc" = {
+          id = "REGVHPE-ONOK54H-IPFGPUD-XXVMZ6A-BD6SZZS-AP4BABO-OSMKUC3-FVL6KQD";
+        };
+        "laptop" = {
+          id = "DDWU3BM-NA6QZSD-TA2WNIS-Z4XIMDW-NS4A5BA-HA5GUPM-I4AEZ6M-5X7FAA7";
+        };
+      };
+      folders = {
+        "leta-shell" = {
+          path = "/home/${globalConfig.user}/Public/leta-shell";
+          devices = [
+            "pc"
+            "laptop"
+          ];
+        };
+      };
+    };
   };
 
   services.gvfs.enable = true;

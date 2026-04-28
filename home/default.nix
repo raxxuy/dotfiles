@@ -16,7 +16,6 @@
     vlc
     discord
     obsidian
-    syncthing
     localsend
     obs-studio
     pavucontrol
