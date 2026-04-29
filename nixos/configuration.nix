@@ -76,6 +76,13 @@
             "laptop"
           ];
         };
+        "tailwind2gtk" = {
+          path = "/home/${globalConfig.user}/Public/tailwind2gtk";
+          devices = [
+            "pc"
+            "laptop"
+          ];
+        };
       };
     };
   };
