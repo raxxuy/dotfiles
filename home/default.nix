@@ -19,6 +19,7 @@
     localsend
     obs-studio
     pavucontrol
+    qbittorrent
 
     # dev
     jetbrains.idea
@@ -98,7 +99,7 @@
     ./theme.nix
     ./fonts.nix
     ./fish.nix
-    ./nvim.nix
+    # ./nvim.nix
     ./git.nix
     ./zed.nix
     ./zen.nix
