@@ -1,5 +1,5 @@
 -- require("$HOME/.config/hypr/leta-shell.lua")
-require("leta-shell")
+local leta = require("leta-shell")
 
 
 -- VARIABLES
@@ -87,7 +87,7 @@ hl.config({
         },
 
         col = {
-            active_border = primary
+            active_border = leta.primary
         }
     },
 
