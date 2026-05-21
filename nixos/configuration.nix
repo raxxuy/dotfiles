@@ -93,6 +93,7 @@
   services.blueman.enable = true;
   hardware.bluetooth.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  services.gnome.glib-networking.enable = true;
   services.power-profiles-daemon.enable = true;
   virtualisation.docker.enable = true;
 

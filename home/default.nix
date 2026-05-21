@@ -9,6 +9,7 @@
     # cli
     tree
     btop
+    nixd
     deepfilternet
     docker-compose
 
@@ -20,6 +21,7 @@
     obs-studio
     pavucontrol
     qbittorrent
+    neovim
 
     # dev
     jetbrains.idea

@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
+let
+  hyprlandStubs = "${pkgs.hyprland}/share/hypr/stubs";
+in
 {
   home.packages = with pkgs; [
     nil
@@ -39,6 +42,15 @@
         biome = {
           settings = {
             require_config_file = false;
+          };
+        };
+        "lua-language-server" = {
+          settings = {
+            Lua = {
+              workspace = {
+                library = [ hyprlandStubs ];
+              };
+            };
           };
         };
         "tailwindcss-language-server" = {
@@ -94,13 +106,13 @@
 
     extensions = [
       "nix"
+      "lua"
       "html"
       "toml"
       "scss"
       "biome"
       "pylsp"
       "git-firefly"
-      "macos-classic"
       "dockerfile"
       "docker-compose"
     ];
