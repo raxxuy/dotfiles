@@ -112,6 +112,7 @@ in
       "scss"
       "biome"
       "pylsp"
+      "catppuccin"
       "git-firefly"
       "dockerfile"
       "docker-compose"
