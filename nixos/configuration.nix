@@ -18,10 +18,21 @@
     efi.canTouchEfiVariables = true;
 
     grub = {
-      enable = true;
+      enable = false;
       device = "nodev";
       efiSupport = true;
       useOSProber = true;
+    };
+
+    limine = {
+      enable = true;
+      secureBoot.enable = true;
+
+      extraEntries = ''
+        /Windows
+            protocol: efi
+            path: uuid(345a9c33-285b-4d1e-b5f6-696ddf943d1d):/EFI/Microsoft/Boot/bootmgfw.efi
+      '';
     };
   };
 
@@ -98,6 +109,7 @@
   virtualisation.docker.enable = true;
 
   environment.systemPackages = with pkgs; [
+    sbctl
     gparted
     inputs.matugen.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

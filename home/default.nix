@@ -9,7 +9,6 @@
     # cli
     tree
     btop
-    nixd
     deepfilternet
     docker-compose
 
