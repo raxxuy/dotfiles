@@ -9,6 +9,7 @@
     # cli
     tree
     btop
+    xdg-utils
     deepfilternet
     docker-compose
 

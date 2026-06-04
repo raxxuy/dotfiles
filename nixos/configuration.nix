@@ -98,6 +98,13 @@
     };
   };
 
+  services.dbus = {
+    enable = true;
+    packages = with pkgs; [
+      dconf
+    ];
+  };
+  
   services.gvfs.enable = true;
   services.upower.enable = true;
   security.polkit.enable = true;
@@ -112,6 +119,11 @@
     sbctl
     gparted
     inputs.matugen.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+
+  environment.pathsToLink = [
+    "/share/applications"
+    "/share/xdg-desktop-portal"
   ];
 
   users.users.${globalConfig.user} = {
@@ -132,9 +144,9 @@
     "flakes"
   ];
 
+  programs.dconf.enable = true;
   programs.fish.enable = true;
   programs.nix-ld.enable = true;
-  programs.hyprland.enable = true;
 
   system.stateVersion = "26.05";
 }
