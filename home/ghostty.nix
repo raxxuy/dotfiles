@@ -12,7 +12,7 @@ in
       font-size = ghostty.font-size;
       window-padding-x = 10;
       window-padding-y = 10;
-      background-opacity = 0.8;
+      background-opacity = 0.9;
       theme = "leta-shell";
       gtk-toolbar-style = "flat";
     };

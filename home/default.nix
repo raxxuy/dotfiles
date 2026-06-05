@@ -31,6 +31,7 @@
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
     noto-fonts-cjk-sans
+    noto-fonts-color-emoji
 
     # gpu
     rocmPackages.rocm-smi
