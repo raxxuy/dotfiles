@@ -73,7 +73,7 @@
     settings = {
       devices = {
         "pc" = {
-          id = "IZZD5ZF-QMQ2VA6-VLX5W2N-FKY26OB-3EJJWJK-2HDHCYL-YQNTCCX-CFJMJQN";
+          id = "BKVLRMD-SC5KY43-UNBMZYI-JABRVXA-O7CVRU7-SGWU6EA-KNNBWYY-TQKFCA2";
         };
         "laptop" = {
           id = "KLTQBQD-7T6ZV4Y-SXZAJKG-3HVJCR4-4UTQU7L-EJX3R7M-SA27UMG-O35B7QB";
@@ -82,13 +82,6 @@
       folders = {
         "leta-shell" = {
           path = "/home/${globalConfig.user}/Public/leta-shell";
-          devices = [
-            "pc"
-            "laptop"
-          ];
-        };
-        "tailwind2gtk" = {
-          path = "/home/${globalConfig.user}/Public/tailwind2gtk";
           devices = [
             "pc"
             "laptop"
