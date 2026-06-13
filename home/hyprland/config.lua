@@ -1,5 +1,10 @@
 -- require("$HOME/.config/hypr/leta-shell.lua")
-local leta = require("leta-shell")
+local status, leta = pcall(require, "leta-shell")
+if not status then
+    leta = {
+        primary = "#ffffff" -- fallback values
+    }
+end
 
 
 -- VARIABLES

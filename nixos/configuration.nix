@@ -51,6 +51,7 @@
   };
 
   security.rtkit.enable = true;
+  security.pam.services.astal-auth = { };
 
   services.pipewire = {
     enable = true;
@@ -97,7 +98,7 @@
       dconf
     ];
   };
-  
+
   services.gvfs.enable = true;
   services.upower.enable = true;
   security.polkit.enable = true;

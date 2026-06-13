@@ -13,6 +13,12 @@
     deepfilternet
     docker-compose
 
+    # rust
+    gcc
+    rustc
+    cargo
+    rust-analyzer
+
     # programs
     vlc
     discord
