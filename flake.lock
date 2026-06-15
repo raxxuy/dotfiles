@@ -130,11 +130,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1781431599,
-        "narHash": "sha256-M/26aESnFIaYZbs7HP89xdciApV8NxpOS3kwUBTbGUw=",
+        "lastModified": 1781476428,
+        "narHash": "sha256-xnlI8YzKV/BouoG5wJZuQEIEXPVe9O6hJVHy5cY+yZA=",
         "owner": "raxxuy",
         "repo": "leta-shell",
-        "rev": "a01ba10f17174ff286087d3b451c48ae30275b23",
+        "rev": "860bfd8d72af749fc3646bc25a491dd201ed2720",
         "type": "github"
       },
       "original": {
@@ -150,11 +150,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1781366848,
-        "narHash": "sha256-scH7OsPJmyW4T6KGgw9U3YPf9mp9aEFjI/4qZPQq4eE=",
+        "lastModified": 1781476314,
+        "narHash": "sha256-Nz6zZq7td8hqp/qStVtVALbQ1KjclBU3erz9RoIs6Eo=",
         "owner": "raxxuy",
         "repo": "leta-toolkit",
-        "rev": "c4632e5472d9654a49225fd886d0d49d340295bf",
+        "rev": "fffd592e7ba53b3aa6a954192548d0627b0dd0c1",
         "type": "github"
       },
       "original": {
