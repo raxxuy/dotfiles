@@ -29,11 +29,6 @@
     qbittorrent
     neovim
 
-    # dev
-    jetbrains.idea
-    jetbrains.webstorm
-    jetbrains.pycharm
-
     # fonts
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
