@@ -6,6 +6,11 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    apple-fonts = {
+      url = "github:raxxuy/apple-fonts.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,6 +30,7 @@
         modules = [
           ./hosts/desktop
           inputs.home-manager.nixosModules.home-manager
+          inputs.apple-fonts.nixosModules.default
         ];
       };
     };
