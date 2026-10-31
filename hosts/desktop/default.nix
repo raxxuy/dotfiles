@@ -32,7 +32,10 @@
   users.users.micho = {
     isNormalUser = true;
     description = "micho";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
 
   nixpkgs.config.allowUnfree = true;

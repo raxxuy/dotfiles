@@ -14,6 +14,9 @@
         packages = with pkgs; [
           zed-editor
           git-credential-manager
+          nil
+          nixd
+          nixfmt
         ];
       };
 

@@ -12,20 +12,20 @@
     };
   };
 
-  outputs = inputs @ { flake-parts, ... }:
+  outputs =
+    inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
 
-      flake.nixosConfigurations.desktop =
-        inputs.nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+      flake.nixosConfigurations.desktop = inputs.nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
-          specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs; };
 
-          modules = [
-            ./hosts/desktop
-            inputs.home-manager.nixosModules.home-manager
-          ];
-        };
+        modules = [
+          ./hosts/desktop
+          inputs.home-manager.nixosModules.home-manager
+        ];
+      };
     };
 }
