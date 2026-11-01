@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -32,11 +32,18 @@
   users.users.micho = {
     isNormalUser = true;
     description = "micho";
+
+    shell = pkgs.zsh;
+
     extraGroups = [
       "networkmanager"
       "wheel"
     ];
   };
+
+  environment.shells = with pkgs; [ zsh ];
+
+  programs.zsh.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 

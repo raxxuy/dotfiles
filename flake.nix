@@ -6,6 +6,8 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
     apple-fonts = {
       url = "github:raxxuy/apple-fonts.nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -14,6 +16,12 @@
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
   };
 
@@ -29,8 +37,19 @@
 
         modules = [
           ./hosts/desktop
-          inputs.home-manager.nixosModules.home-manager
           inputs.apple-fonts.nixosModules.default
+          inputs.home-manager.nixosModules.home-manager
+
+          {
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
+
+            home-manager.sharedModules = [
+              inputs.zen-browser.homeModules.default
+              inputs.spicetify-nix.homeManagerModules.default
+            ];
+          }
         ];
       };
     };
