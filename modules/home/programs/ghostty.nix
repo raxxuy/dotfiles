@@ -26,4 +26,6 @@
       ];
     };
   };
+
+  home.sessionVariables.TERMINAL = "ghostty";
 }

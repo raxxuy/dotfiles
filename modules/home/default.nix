@@ -7,14 +7,15 @@
 
     users.micho = {
       imports = [
-        ./themes/default.nix
-        ./programs/git.nix
-        ./programs/zsh.nix
-        ./programs/btop.nix
-        ./programs/zen.nix
-        ./programs/ghostty.nix
-        ./programs/spotify.nix
         ./programs/hyprland
+        ./programs/btop.nix
+        ./programs/ghostty.nix
+        ./programs/git.nix
+        ./programs/spotify.nix
+        ./programs/zed.nix
+        ./programs/zen.nix
+        ./programs/zsh.nix
+        ./themes/default.nix
       ];
 
       home = {
@@ -23,9 +24,6 @@
         stateVersion = "26.05";
 
         packages = with pkgs; [
-          # development
-          zed-editor
-
           # applications
           discord
           obsidian
@@ -33,21 +31,9 @@
 
           # cli
           tree
-
-          # nix
-          nil
-          nixd
-          nixfmt
-
-          # lua
-          lua-language-server
-
-          package-version-server
         ];
 
         sessionVariables = {
-          TERMINAL = "ghostty";
-          BROWSER = "zen-beta";
           FILE_MANAGER = "nautilus";
         };
       };
