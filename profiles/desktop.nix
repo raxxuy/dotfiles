@@ -10,7 +10,8 @@
     ../modules/home/default.nix
   ];
 
-  services.printing.enable = true;
-
-  programs.firefox.enable = true;
+  environment.pathsToLink = [
+    "/share/applications"
+    "/share/xdg-desktop-portal"
+  ];
 }
