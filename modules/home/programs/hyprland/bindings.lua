@@ -56,7 +56,7 @@ end
 
 -- Windows
 bind(keys.windows.close, hl.dsp.window.close(), "Close focused window")
-bind(keys.windows.quit, hl.dsp.window.close(), "Close focused window (quit fallback)")
+bind(keys.windows.quit, hl.dsp.window.kill(), "Close focused window (quit fallback)")
 bind(keys.windows.float, hl.dsp.window.float({ action = "toggle" }), "Toggle floating")
 bind(keys.windows.fullscreen, hl.dsp.window.fullscreen({ action = "toggle" }), "Toggle fullscreen")
 

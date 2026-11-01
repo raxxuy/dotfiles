@@ -126,6 +126,10 @@
     nil
     nixd
     nixfmt
+    gcc
+    rustc
+    cargo
+    rust-analyzer
     lua-language-server
     package-version-server
   ];
